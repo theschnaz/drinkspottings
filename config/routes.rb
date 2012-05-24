@@ -1,4 +1,6 @@
 Drinkspottings::Application.routes.draw do
+
+  match "/email" => "posts#post_email"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
