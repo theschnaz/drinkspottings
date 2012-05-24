@@ -4,9 +4,6 @@ gem 'rails', '3.1.1'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-gem 'pg'
-
 gem 'paperclip', "~> 3.0"
 gem 'aws-s3'
 
@@ -31,6 +28,14 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 
 group :test do
   # Pretty printed test output
