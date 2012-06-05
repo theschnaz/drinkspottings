@@ -1,0 +1,14 @@
+<% form_tag :action => 'create', :html => { :multipart => true } do |f| %>
+  <p>
+    Name<br />
+    <%= text_field(:post, :name) %>
+  </p>
+  <p>
+    Description<br />
+    <%= text_area(:post, :description), :rows => 10 %>
+  </p>
+  <p>
+    <%= file_field(:post, :photo) %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>
