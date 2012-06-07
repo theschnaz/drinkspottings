@@ -1,6 +1,8 @@
 Drinkspottings::Application.routes.draw do
 
-  map.root :post
+  match "/create" => "posts#create"
+  
+  match "/form" => "posts#form"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
