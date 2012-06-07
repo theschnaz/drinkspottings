@@ -1,13 +1,13 @@
 class PostsController < ApplicationController
 
 
-  def form
+  def new
     @post = Post.new
   end
 
   def create
   
-    @post = Post.new(params[:product])
+    @post = Post.new(params[:post])
     @post.save
     
     render :text => "email sent", :status => 200
