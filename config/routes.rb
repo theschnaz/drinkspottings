@@ -2,6 +2,8 @@ Drinkspottings::Application.routes.draw do
 
   match "/create" => "posts#create"
   
+  match "/email" => "posts#create"
+  
   match "/new" => "posts#new"
   
   # The priority is based upon order of creation:
