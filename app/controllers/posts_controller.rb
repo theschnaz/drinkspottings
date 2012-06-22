@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     image = {
     	"name" => params[:subject],
     	"description" => params[:text],
-    	photo => params[:attachment1]
+    	"photo" => params[:attachment1]
     }
     
     render :text => image, :status => 200
