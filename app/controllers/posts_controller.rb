@@ -7,14 +7,16 @@ class PostsController < ApplicationController
 
   def create
   
-    #@post = Post.new(params[:post])
-    #@post.save
+    
     
     image = {
     	"name" => params[:subject],
     	"description" => params[:text],
     	"photo" => params[:attachment1]
     }
+    
+    @post = Post.new(image)
+    @post.save
     
     render :text => image, :status => 200
   
