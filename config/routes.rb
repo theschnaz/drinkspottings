@@ -2,11 +2,13 @@ Drinkspottings::Application.routes.draw do
 
   match "/create" => "posts#create"
   
+  
   match "/email" => "posts#create"
   
   match "/new" => "posts#new"
   
   match "/facebook" => "sessions#create"
+  match '/signout', :to => 'sessions#destroy'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
