@@ -6,6 +6,8 @@ Drinkspottings::Application.routes.draw do
   
   match "/new" => "posts#new"
   
+  match "/facebook" => "sessions#create"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

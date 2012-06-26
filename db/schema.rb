@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120523021044) do
+ActiveRecord::Schema.define(:version => 20120626015421) do
 
   create_table "posts", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,20 @@ ActiveRecord::Schema.define(:version => 20120523021044) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "username"
+    t.string   "email"
+    t.string   "facebook_key"
+    t.string   "fb_pic_square"
+    t.string   "fb_pic_large"
+    t.string   "provider"
+    t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
