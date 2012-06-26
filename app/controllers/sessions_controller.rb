@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
     flash[:success] = "Welcome Drinkspottings!"
     #redirect_to root_url
-    redirect "/new"
+    redirect_to "/new"
   end
   
   def destroy
