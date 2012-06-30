@@ -4,12 +4,11 @@ class SessionsController < ApplicationController
     user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)
     session[:user_id] = user.id
     flash[:success] = "Welcome Drinkspottings!"
-    #redirect_to root_url
-    redirect_to "/new"
+    redirect_to root_url
   end
   
   def destroy
     session[:user_id] = nil
-    redirect_to "/new", :notice => "Signed out!"
+    redirect_to root_url, :notice => "Signed out!"
   end
 end
