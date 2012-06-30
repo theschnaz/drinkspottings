@@ -13,7 +13,7 @@ Drinkspottings::Application.routes.draw do
   match '/signout', :to => 'sessions#destroy'
   
   
-  resources :comments
+  resources :users
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
