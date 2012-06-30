@@ -283,7 +283,6 @@ input:focus, textarea:focus {
     position: relative;
     vertical-align: top;
     top: -24px;
-    left: 30px;
     float: left;
 }
 #header #logo h1 {
