@@ -1,0 +1,21 @@
+<div id="header">
+  <div class="header-bar">
+    <div id="logo">
+      <h1><a href="/"><img src="/images/compass-icon.png" style="float:left; position:relative; bottom:22px; padding-right:3px;"/>Pubbd</a></h1>
+    </div>
+    <ul id="menu">  
+      <li class="current-menu-item">  
+        <a href="/">Home</a>
+      </li>
+      <% if current_user %>
+        <li>
+          <%= link_to "Sign Out", signout_path %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to "Sign In", "/auth/facebook" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

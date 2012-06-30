@@ -1,5 +1,7 @@
 Drinkspottings::Application.routes.draw do
 
+  root :to => 'pages#home'
+
   match "/create" => "posts#create"
   
   
