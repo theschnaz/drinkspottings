@@ -1,0 +1,10 @@
+<% if current_user.nil? %>
+    <h1><%= @user.name %> is on Drinkspottings</h1>
+    Don't miss any drinks from <%= @user.name %>.  Get your account on Drinkspottings today.
+    <br />
+    <strong><a href="/auth/facebook">Sign up today!</a></strong>
+  </div>
+<% end %>
+
+<!-- <%= render 'user_image_stats' %>
+<%= render 'shared/feed' %> -->

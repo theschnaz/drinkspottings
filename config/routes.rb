@@ -12,6 +12,9 @@ Drinkspottings::Application.routes.draw do
   match "/auth/facebook/callback" => "sessions#create"
   match '/signout', :to => 'sessions#destroy'
   
+  
+  resources :comments
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
