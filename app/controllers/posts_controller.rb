@@ -9,13 +9,13 @@ class PostsController < ApplicationController
   
     
     
-    image = {
-    	"name" => params[:subject],
-    	"description" => params[:text],
-    	"photo" => params[:attachment1]
-    }
+   # image = {
+   # 	"name" => params[:subject],
+   # 	"description" => params[:text],
+   # 	"photo" => params[:attachment1]
+   # }
     
-    @post = Post.new(image)
+    @post = Post.new(:params)
     @post.save
     
     render :text => image, :status => 200
