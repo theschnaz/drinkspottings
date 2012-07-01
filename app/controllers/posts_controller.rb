@@ -16,6 +16,7 @@ class PostsController < ApplicationController
    # }
     
     @post = Post.new(params[:post])
+    @post.posted_by = params[:posted_by]
     @post.save
     
     render :text => @post, :status => 200
