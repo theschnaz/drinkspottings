@@ -10,5 +10,6 @@
   <p>
     <%= f.file_field :photo %>
   </p>
+  <%= hidden_field_Tag(:posted_by, current_user.id) %>
   <p><%= f.submit "Submit" %></p>
 <% end %>
