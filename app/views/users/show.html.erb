@@ -7,8 +7,10 @@
 <% end %>
 
 <div class="sidebar-right">
-  <h3><%= link_to @user.name, @user %></h3>
-  <img src="<%= @user.fb_pic_large %>" height="50" /> 
+  <h5><%= link_to @user.name, @user %></h5>
+  <center>
+    <img src="<%= @user.fb_pic_large %>" /> 
+  </center>
 </div>
 
 <div class="mainarea mainarea-center">
