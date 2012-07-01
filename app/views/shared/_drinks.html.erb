@@ -1,5 +1,5 @@
 drinks yo0
-<% @posted_and_liked_drinks.each do |f| %>
+<%= @posted_and_liked_drinks.each do |f| %>
   <%= f.name %><br />
   <%= image_tag f.photo.url(:medium) %><br />
   <%= f.description %>
