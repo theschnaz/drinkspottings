@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
     @post.save
     
-    render :text => image, :status => 200
+    render :text => @post, :status => 200
   
   end
 
