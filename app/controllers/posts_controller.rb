@@ -15,7 +15,7 @@ class PostsController < ApplicationController
    # 	"photo" => params[:attachment1]
    # }
     
-    @post = Post.new(:params)
+    @post = Post.new(params[:post])
     @post.save
     
     render :text => image, :status => 200
