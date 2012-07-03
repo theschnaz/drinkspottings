@@ -606,7 +606,7 @@ ul#menu li:hover > .pixel-mega-menu { display: block; }
 }
 .sidebar-right { float: right; margin: 0; background: transparent url('../images/sidebar-vert-sep-bkg.jpg') repeat-y left top scroll; padding: 4px 0 0 10px; }
 .mainarea-left { float: left; margin: 0 30px 0 0; }
-.mainarea-center { width: 500px; margin: 0 30px 0 0; float: left; }
+.mainarea-center { width: 100%; margin: 0 30px 0 0; float: left; }
 .sidebar-right.margin { float: left; }
 
 
