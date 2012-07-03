@@ -4,6 +4,8 @@
       <%= f.name %><br />
       <%= f.description %>
     </div>
-    <%= image_tag f.photo.url(:medium) style="float:right;"%>
+    <div style="float:right;">
+      <%= image_tag f.photo.url(:medium) %>
+    </div>
   </div>
 <% end %>
