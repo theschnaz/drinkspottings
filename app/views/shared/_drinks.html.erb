@@ -1,5 +1,5 @@
 <% @posted_and_liked_drinks.each do |f| %>
-  <%= f.name %><br />
+  <h6 class="hashed" style="color:#C78C45;"><%= f.name %></h6>
   <%= image_tag f.photo.url(:medium) %><br />
   <%= f.description %>
   <br />
