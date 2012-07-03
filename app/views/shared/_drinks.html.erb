@@ -1,5 +1,5 @@
 <% @posted_and_liked_drinks.each do |f| %>
-  <div class="cta-box">
+  <h6 class="hashed">&nbsp;</h6>
     <div style="float:left;">
       <%= f.name %><br />
       <%= f.description %>
@@ -8,4 +8,5 @@
       <%= image_tag f.photo.url(:medium) %>
     </div>
   </div>
+  <h6 class="hashed">&nbsp;</h6>
 <% end %>
