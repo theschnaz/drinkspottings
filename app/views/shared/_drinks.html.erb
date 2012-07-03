@@ -1,5 +1,11 @@
 <% @posted_and_liked_drinks.each do |f| %>
-  <h6 class="hashed" style="color:#C78C45;"><%= f.name %></h6>
+  <h6 class="hashed" style="color:#C78C45;">
+    <span>
+      <cufon class="cufon cufon-canvas" alt="text" style="width: 34px; height: 16px;">
+        <%= f.name %>
+      </cufon>
+    </span>    
+  </h6>
   <%= image_tag f.photo.url(:medium) %><br />
   <%= f.description %>
   <br />
