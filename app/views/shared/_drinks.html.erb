@@ -1,22 +1,14 @@
 <div class="multi-columns">
   <% @posted_and_liked_drinks.each do |f| %>
     <div class="half">
-      <h6><%= f.name %></h6>
-      <%= f.description %><br />
       <center>
+        <h6><%= f.name %></h6>
         <%= image_tag f.photo.url(:medium) %>
       </center>  
       <br />
-      <div style="float:left;">
-        Posted by:<br />
-        Gregory Schnese
-      </div>
-      <div style="float:right;">
-        Posted at:<br />
-        Bar89
-      </div>
+      <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/174039_803799546_442177773_q.jpg" style="float:left; padding-right:30px; padding-left:10px;"/>
+      <%= f.description %>
       <br />
-      Tags
     </div>
   <% end %>
 </div>
