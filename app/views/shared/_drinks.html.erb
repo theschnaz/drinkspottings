@@ -2,11 +2,21 @@
   <% @posted_and_liked_drinks.each do |f| %>
     <div class="half">
       <h6><%= f.name %></h6>
+      <%= f.description %><br />
       <center>
         <%= image_tag f.photo.url(:medium) %>
       </center>  
       <br />
-      <%= f.description %>
+      <div style="float:left;">
+        Posted by:<br />
+        Gregory Schnese
+      </div>
+      <div style="float:right;">
+        Posted at:<br />
+        Bar89
+      </div>
+      <br />
+      Tags
     </div>
   <% end %>
 </div>
