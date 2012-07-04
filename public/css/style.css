@@ -572,13 +572,13 @@ ul#menu li:hover > .pixel-mega-menu { display: block; }
 	width: 46%; 
 	margin-right: 2%;
 	background-color:#ffffff;
-	border-color:#BDBDBD;
+	border-color:#C1B18B;
 	border-width:1px;
 	border-style:solid;
 	padding:5px;
-	-moz-box-shadow:    3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  	box-shadow:         3px 3px 5px 6px #ccc; 
+	-moz-box-shadow:    3px 3px 5px 6px #C1B18B;
+    -webkit-box-shadow: 3px 3px 5px 6px #C1B18B;
+  	box-shadow:         3px 3px 5px 6px #C1B18B; 
   	}
 .multi-columns .third { float: left; width: 31%; margin-right: 3.5%; }
 .multi-columns .twothirds { float: left; width: 65.5%; margin-right: 3.5%; }
