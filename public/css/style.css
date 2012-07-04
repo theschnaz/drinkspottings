@@ -567,7 +567,19 @@ ul#menu li:hover > .pixel-mega-menu { display: block; }
 
 .multi-columns { clear: both; overflow: hidden; margin-bottom: 20px; }
 .multi-columns .multi-columns { clear: both; margin: 0; }
-.multi-columns .half { float: left; width: 48%; margin-right: 4%; }
+.multi-columns .half { 
+	float: left; 
+	width: 46%; 
+	margin-right: 2%;
+	background-color:#ffffff;
+	border-color:#BDBDBD;
+	border-width:1px;
+	border-style:solid;
+	padding:5px;
+	-moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  	box-shadow:         3px 3px 5px 6px #ccc; 
+  	}
 .multi-columns .third { float: left; width: 31%; margin-right: 3.5%; }
 .multi-columns .twothirds { float: left; width: 65.5%; margin-right: 3.5%; }
 .multi-columns .fourth { float: left; width: 22%; margin-right: 4%; }

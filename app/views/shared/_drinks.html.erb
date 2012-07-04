@@ -1,7 +1,7 @@
 <div class="multi-columns">
   <% @posted_and_liked_drinks.each do |f| %>
     <div class="half">
-      <%= f.name %><br />
+      <h6><%= f.name %></h6>
       <%= image_tag f.photo.url(:medium) %><br />
       <%= f.description %>
     </div>
