@@ -2,7 +2,10 @@
   <% @posted_and_liked_drinks.each do |f| %>
     <div class="half">
       <h6><%= f.name %></h6>
-      <%= image_tag f.photo.url(:medium) %><br />
+      <center>
+        <%= image_tag f.photo.url(:medium) %>
+      </center>  
+      <br />
       <%= f.description %>
     </div>
   <% end %>
