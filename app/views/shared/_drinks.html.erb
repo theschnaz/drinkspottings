@@ -1,12 +1,7 @@
 <% @posted_and_liked_drinks.each do |f| %>
-  <h6 class="hashed">&nbsp;</h6>
-  <div style="float:left;">
-    <%= f.name %><br />
-    <%= f.description %>
-  </div>
-  <div style="float:right;">
-    <%= image_tag f.photo.url(:medium) %>
-  </div>
-  <h6 class="hashed">&nbsp;</h6>
+  <div class="half">
+      <%= f.name %><br />
+      <%= image_tag f.photo.url(:medium) %><br />
+      <%= f.description %>
   </div>
 <% end %>
