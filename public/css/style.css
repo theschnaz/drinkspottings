@@ -595,6 +595,7 @@ ul#menu li:hover > .pixel-mega-menu { display: block; }
 	border-width:1px;
 	border-style:solid;
 	padding:5px;
+	padding-bottom:10px;
 	-moz-box-shadow:    1px 1px 4px 1px #C1B18B;
     -webkit-box-shadow: 1px 1px 4px 1px #C1B18B;
   	box-shadow:         1px 1px 4px 1px #C1B18B; 
