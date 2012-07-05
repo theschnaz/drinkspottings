@@ -705,7 +705,7 @@ a.custom-button:hover {
     box-shadow: inset 0 -10px 20px #b5a789;
 }
 
-a.more-button {
+.more-button {
     display: inline-block;
     height: 23px;
     background: #c3b598 url('../images/more-button-arrow.gif') no-repeat right center;
@@ -714,10 +714,10 @@ a.more-button {
     font: italic 13px/22px Arial;
     margin: 0 0 30px 0;
 }
-a.more-button:hover {
+/*a.more-button:hover {
     background: #6c675c url('../images/more-button-arrow-over.gif') no-repeat right center;
     text-decoration: none;
-}
+}*/
 
 /* ----------------------------------------------------------
  * CALL TO ACTION BOX
