@@ -2,7 +2,7 @@
   <% @posted_and_liked_drinks.each do |f| %>
     <div class="half">
       <center>
-        <h6 style="padding-top:20px; margin-bottom:20px;"><img scr="/images/title-left.png" /><%= f.name %><img src="/images/title-right.png" /></h6>
+        <h6 style="padding-top:20px; margin-bottom:20px;"><img src="/images/title-left.png" /><%= f.name %><img src="/images/title-right.png" /></h6>
         <%= image_tag f.photo.url(:medium) %>
       </center>  
       <br />
