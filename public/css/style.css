@@ -162,6 +162,25 @@ a.image-holder .image-zoom {
     overflow: hidden;
 }
 
+.drinkinfo {
+	background-color: #F4E4BF; 
+	padding:5px;
+}
+.drinkinfo img{
+	padding-right:10px; 
+	padding-left:10px;
+}
+.drinktag{
+	background-color: #b0a07b; 
+	padding-left:5px; 
+	padding-right:5px; 
+	float:left; 
+	margin-right:10px;
+	-moz-box-shadow:    1px 1px 4px 1px #C1B18B;
+    -webkit-box-shadow: 1px 1px 4px 1px #C1B18B;
+  	box-shadow:         1px 1px 4px 1px #C1B18B;
+}
+
 body .alignleft {
     float: left;
     margin-right: 24px;
