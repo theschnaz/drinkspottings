@@ -165,8 +165,8 @@ a.image-holder .image-zoom {
 .drinkinfo {
 	background-color: #F4E4BF; 
 	padding:5px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 .drinkinfo img{
 	padding-right:10px; 
@@ -181,6 +181,8 @@ a.image-holder .image-zoom {
 	-moz-box-shadow:    1px 1px 4px 1px #C1B18B;
     -webkit-box-shadow: 1px 1px 4px 1px #C1B18B;
   	box-shadow:         1px 1px 4px 1px #C1B18B;
+  	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
 body .alignleft {
