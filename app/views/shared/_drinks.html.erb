@@ -2,18 +2,17 @@
   <% @posted_and_liked_drinks.each do |f| %>
     <div class="half">
       <center>
-        <img src="/images/title-left.png" style="float:left;" /><h6 style="float:left;"><%= f.name %></h6><img src="/images/title-right.png" style="float:left;" />
-        <br />
+        <h6 style="padding-top:20px;"><%= f.name %></h6>
         <%= image_tag f.photo.url(:medium) %>
       </center>  
       <br />
       <div style="background-color: #F4E4BF; padding:5px;">
-        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/174039_803799546_442177773_q.jpg" style="float:left; padding-right:10px; padding-left:10px;" width="25"/> Posted by TheSchnaz.
+        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/174039_803799546_442177773_q.jpg" style="padding-right:10px; padding-left:10px;" width="25"/> Posted by TheSchnaz.
         "<%= f.description %>"
       </div>
       <br />
       <div style="background-color: #d2c29d; padding:5px;">
-        <img src="/images/compass-icon.png" style="float:left; padding-right:10px; padding-left:10px;" width="25"/> Posted at Bar89.
+        <img src="/images/compass-icon.png" style="padding-right:10px; padding-left:10px;" width="25"/> Posted at Bar89.
       </div>
       <br />
       <div style="background-color: #b0a07b; padding-left:5px; padding-right:5px; float:left; margin-right:10px;">
