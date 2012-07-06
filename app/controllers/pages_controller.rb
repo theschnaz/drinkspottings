@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
   def home
     @title = "Home"
-    @posted_and_liked_drinks = Post.find_by_sql ['SELECT "posts".* FROM "posts" WHERE ("posts".posted_by = ?) ORDER BY posts.created_at DESC', current_user.id]
+    
+    if current_user
+      @user = current_user
+      @posted_and_liked_drinks = Post.find_by_sql ['SELECT "posts".* FROM "posts" WHERE ("posts".posted_by = ?) ORDER BY posts.created_at DESC', @user.id]
+    end
 
   end
   
