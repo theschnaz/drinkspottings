@@ -289,7 +289,7 @@ input:focus, textarea:focus {
 
 #header { position: relative; width: 960px; margin: 0 auto; }
 #header .header-bar {
-    margin: 50px 0 50px 0;
+    margin: 20px 0 40px 0;
     clear: both;
     height: 79px;
     /*background: transparent url('../images/header-bar-bkg.png') repeat-x left top;*/
@@ -317,7 +317,6 @@ input:focus, textarea:focus {
     right: -5px;
     top: 0;
     color: #fff;
-    background: transparent url('../images/logo-fg.png') repeat-x left top;
     height: 54px;
     padding: 26px 5px 0 5px;
     width: 100%;
