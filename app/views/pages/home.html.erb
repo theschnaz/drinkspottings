@@ -1,5 +1,11 @@
 <% if current_user %>
-  <div rel="B1UACH9A" class="lrdiscoverwidget" data-logo="on" data-background="on" data-share-url="drinkspottings.com" data-css=""></div><script type="text/javascript" src="http://launchrock-ignition.s3.amazonaws.com/ignition.1.1.js"></script>
+  <div class="sidebar-left">
+    <h6 style="margin-bottom:15px;"><%= @user.name %></h6>
+    <img src="<%= @user.fb_pic_large %>" /> 
+  </div>
+  <div class="mainarea mainarea-center">
+    <%= render 'shared/drinks' %>
+  </div>
 <% else %>
   <h1>Drink like a pro!</h2>
 <% end %>
