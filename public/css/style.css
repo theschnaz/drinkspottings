@@ -162,6 +162,10 @@ a.image-holder .image-zoom {
     overflow: hidden;
 }
 
+.handfont {
+	font-family: 'Kaushan Script', cursive;
+}
+
 .drinkinfo {
 	background-color: #F4E4BF; 
 	padding:5px;
@@ -310,7 +314,6 @@ input:focus, textarea:focus {
 }
 #header #logo h1 {
     position: relative;
-    font-family: 'Kaushan Script', cursive;
     margin: 0;
     margin-top: 24px;
     left: -5px;
