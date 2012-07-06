@@ -292,7 +292,8 @@ input:focus, textarea:focus {
     margin: 50px 0 50px 0;
     clear: both;
     height: 79px;
-    background: transparent url('../images/header-bar-bkg.png') repeat-x left top;
+    /*background: transparent url('../images/header-bar-bkg.png') repeat-x left top;*/
+    background: transparent url('../images/logo-fg.png') repeat-x left top
     position: relative;
 }
 
