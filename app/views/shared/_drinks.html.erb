@@ -1,6 +1,8 @@
+<% float = "left" %>
+
 <div class="multi-columns">
   <% @posted_and_liked_drinks.each do |f| %>
-    <div class="half">
+    <div class="half" style="<%= float &>">
       <center>
         <h6 class="handfont" style="padding-top:20px; margin-bottom:20px; font-size:20px;"><img src="/images/title-left.png" /><%= f.name %><img src="/images/title-right.png" /></h6>
         <%= image_tag f.photo.url(:medium) %>
@@ -18,5 +20,11 @@
         <strong>#Gin</strong>
       </div>
     </div>
+    
+    <% if float == "left"
+        float = "right"
+      elsif
+        float = "left"
+      end %>
   <% end %>
 </div>
