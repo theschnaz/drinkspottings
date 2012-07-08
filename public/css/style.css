@@ -593,7 +593,7 @@ ul#menu li:hover > .pixel-mega-menu { display: block; }
 .multi-columns { clear: both; overflow: hidden; margin-bottom: 20px; }
 .multi-columns .multi-columns { clear: both; margin: 0; }
 .multi-columns .half { 
-	padding-bottom:50px;
+	margin-bottom:50px;
 	width: 46%; 
 	margin-right: 2%;
 	background-color:#ffffff;
