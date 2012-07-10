@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posted_and_liked_drinks = Post.find_by_sql ['SELECT "posts".* FROM "posts" WHERE ("posts".posted_by = ? AND "users".id = ? ) ORDER BY posts.created_at DESC', @user.id, @user.id]
+    @posted_and_liked_drinks = Post.find_by_sql ['SELECT "posts".* FROM "posts" WHERE ("posts".posted_by = ? ) ORDER BY posts.created_at DESC', @user.id]
     #@posted_and_liked_drinks = Post.find_by_sql ['SELECT "posts".*, "users".* FROM "posts", "users" WHERE ("posts".posted_by = ? AND "users".id = ? ) ORDER BY posts.created_at DESC', @user.id, @user.id]
   end
 
