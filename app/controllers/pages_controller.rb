@@ -3,8 +3,9 @@ class PagesController < ApplicationController
     @title = "Home"
     
     if current_user
-      @user = current_user
-      @posted_and_liked_drinks = Post.find_by_sql ['SELECT "posts".* FROM "posts" WHERE ("posts".posted_by = ?) ORDER BY posts.created_at DESC', @user.id]
+      #@user = current_user
+      #this will display all drinks from all users
+      @posted_and_liked_drinks = Post.find_by_sql ['SELECT "posts".*, "users".username, "users".fb_pic_square FROM "posts", "users" ) ORDER BY posts.created_at DESC']
     end
 
   end
