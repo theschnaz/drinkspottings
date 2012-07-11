@@ -171,7 +171,9 @@ a.image-holder .image-zoom {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
-
+.drinkinfo img{
+	padding-left:5px;
+}
 .drinktag{
 	background-color: #b0a07b; 
 	padding-left:5px; 
