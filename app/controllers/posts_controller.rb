@@ -24,7 +24,8 @@ class PostsController < ApplicationController
       @tag.drink_id = @post.id
       @tag.name = "Whiskey"
       @tag.save
-    elsif (params[:gin] == 'selected')
+    end
+    if (params[:gin] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
       @tag.name = "Gin"
