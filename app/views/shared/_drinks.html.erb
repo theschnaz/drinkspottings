@@ -20,9 +20,10 @@
       </div>
       <br />
       <% tags.each do |d| %>
-      <div class="drinktag">
-        <strong><%= d.name %></strong>
-      </div>
+        <div class="drinktag">
+          <strong><%= d.name %></strong>
+        </div>
+      <% end %>
     </div>
     
     <% if float == "left"
