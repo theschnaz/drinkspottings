@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     params[:tags].each do |t|
       @tag = Tag.new
       @tag.drink_id = @post.id
-      @tag.name = t.value
+      @tag.name = t[0]
       @tag.save
     end
     
