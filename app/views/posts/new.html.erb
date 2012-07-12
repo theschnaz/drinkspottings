@@ -11,8 +11,8 @@
     <%= f.file_field :photo %>
   </p>
   <p>
-    <%= check_box_tag 'Whiskey', 'selected' %> Whiskey <br /> 
-    <%= check_box_tag 'Gin', 'selected' %> Gin
+    <%= check_box_tag 'whiskey', 'selected' %> Whiskey <br /> 
+    <%= check_box_tag 'gin', 'selected' %> Gin
   </p>
   <%= hidden_field_tag(:posted_by, current_user.id) %>
   <p><%= f.submit "Submit" %></p>

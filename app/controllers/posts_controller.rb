@@ -19,10 +19,15 @@ class PostsController < ApplicationController
     @post.posted_by = params[:posted_by]
     @post.save
     
-    params[:tags].each do |t|
+    if (params[:whiskey] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
-      @tag.name = t[1]
+      @tag.name = "Whiskey"
+      @tag.save
+    elsif (params[:gin] == 'selected')
+      @tag = Tag.new
+      @tag.drink_id = @post.id
+      @tag.name = "Gin"
       @tag.save
     end
     
