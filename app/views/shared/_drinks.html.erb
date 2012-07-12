@@ -6,7 +6,7 @@
 <div class="multi-columns">
   <% @posted_and_liked_drinks.each do |f| %>
     <%
-      tags = Tag.find(:all, :conditions => ["song_id = ?", f.id])
+      tags = Tag.find(:all, :conditions => ["drink_id = ?", f.id])
     %>
     <div class="half" style="float:<%= float %>;">
       <center>
