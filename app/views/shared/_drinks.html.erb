@@ -19,11 +19,9 @@
         "<%= f.description %>"
       </div>
       <br />
+      <% tags.each do |d| %>
       <div class="drinktag">
-        <strong>#Whiskey</strong>
-      </div>
-      <div class="drinktag">
-        <strong>#Gin</strong>
+        <strong><%= d.name %></strong>
       </div>
     </div>
     
