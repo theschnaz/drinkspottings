@@ -171,13 +171,7 @@ a.image-holder .image-zoom {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
-.drinkinfo a {
-	color:black;
-	text-decoration:none;
-}
-drinkinfo a:hover {
-	text-decoration: none;
-}
+
 .drinkinfo img{
 	padding-right:5px;
 }
@@ -192,6 +186,13 @@ drinkinfo a:hover {
   	box-shadow:         1px 1px 4px 1px #C1B18B;
   	-moz-border-radius: 5px;
 	border-radius: 5px;
+}
+.drinktag a {
+	color:black;
+	text-decoration:none;
+}
+.drinktag a:hover {
+	text-decoration: none;
 }
 
 body .alignleft {
