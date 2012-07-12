@@ -21,7 +21,7 @@
       <br />
       <% tags.each do |d| %>
         <div class="drinktag">
-          <strong><%= d.name %></strong>
+          <strong><a href="/tags/<%= d.id %>"><%= d.name %></a></strong>
         </div>
       <% end %>
     </div>
