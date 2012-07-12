@@ -19,9 +19,12 @@ class PostsController < ApplicationController
     @post.posted_by = params[:posted_by]
     @post.save
     
-    @tag = Tag.new
-    @tag.drink_id = @post.id
-    @tag.name = params[:tags]
+    params[:tags].each do |t|
+      @tag = Tag.new
+      @tag.drink_id = @post.id
+      @tag.name = t
+      @tag.save
+    end
     
     render :text => @post, :status => 200
   
