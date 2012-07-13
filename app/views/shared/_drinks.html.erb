@@ -3,12 +3,12 @@
   float = "left" 
 %>
 
-<div class="multi-columns" style="min-height:500px;">
+<div class="multi-columns">
   <% @posted_and_liked_drinks.each do |f| %>
     <%
       tags = Tag.find(:all, :conditions => ["drink_id = ?", f.id])
     %>
-    <div class="half" style="float:<%= float %>;">
+    <div class="half" style="float:<%= float %>; min-height:400px;">
       <center>
         <h6 class="handfont" style="padding-top:20px; margin-bottom:20px; font-size:20px;"><img src="/images/title-left.png" /><%= f.name %><img src="/images/title-right.png" /></h6>
         <%= image_tag f.photo.url(:medium) %>
