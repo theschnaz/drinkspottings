@@ -3,7 +3,7 @@
   float = "left" 
 %>
 
-<div class="multi-columns">
+<div class="multi-columns" style="min-height:500px;">
   <% @posted_and_liked_drinks.each do |f| %>
     <%
       tags = Tag.find(:all, :conditions => ["drink_id = ?", f.id])
@@ -29,9 +29,6 @@
         float = "right"
       elsif
         float = "left"
-        %>
-        <div style="clear:both;"></div> </div>
-        <%
       end %>
   <% end %>
 </div>
