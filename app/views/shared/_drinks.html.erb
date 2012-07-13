@@ -25,11 +25,13 @@
         </div>
       <% end %>
     </div>
-    
     <% if float == "left"
         float = "right"
       elsif
         float = "left"
+        %>
+        <div style="clear:both;"></div> </div>
+        <%
       end %>
   <% end %>
 </div>
