@@ -21,6 +21,11 @@ class PostsController < ApplicationController
     @post.posted_by = params[:posted_by]
     @post.save
     
+    unless(Venue.find_by_foursquare_id(params[:venue])
+      foursquare = Foursquare::Base.new("G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT", "T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV")
+      venue = foursquare.venues.find(params[:venue])
+    end
+    
     if (params[:whiskey] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
@@ -76,7 +81,7 @@ class PostsController < ApplicationController
       @tag.save
     end
     
-    render :text => @post, :status => 200
+    render :text => venue, :status => 200
   
   end
 
