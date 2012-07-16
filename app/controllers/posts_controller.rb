@@ -38,7 +38,7 @@ class PostsController < ApplicationController
       new_venue.state = venue.location['state']
       new_venue.country = venue.location['country']
       new_venue.icon = venue.icon
-      new_venue.url = venue.url
+      #new_venue.url = venue.url
       
       new_venue.save
     end
