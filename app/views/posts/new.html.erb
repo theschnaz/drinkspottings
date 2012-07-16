@@ -17,6 +17,7 @@
   <p>
     <% @venues.each do |v| %>
       <%= radio_button_tag 'venue', v.name %> v.name <br />
+    <% end %>
   </p>
   <%= hidden_field_tag(:posted_by, current_user.id) %>
   <p><%= f.submit "Submit" %></p>
