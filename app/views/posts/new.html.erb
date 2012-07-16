@@ -17,7 +17,7 @@
   <%= hidden_field_tag(:posted_by, current_user.id) %>
   <p><%= f.submit "Submit" %></p>
   
-  <% @venues.10 do |v| %>
+  <% @venues do |v| %>
     <%= v.name %> <br />
   <% end %>
 <% end %>
