@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120716022638) do
+ActiveRecord::Schema.define(:version => 20120716031835) do
 
   create_table "posts", :force => true do |t|
     t.string   "name"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(:version => 20120716022638) do
   end
 
   create_table "venues", :force => true do |t|
-    t.integer  "foursquare_id"
+    t.string   "foursquare_id"
     t.string   "name"
     t.string   "phone"
     t.string   "twitter"
