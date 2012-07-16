@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120711013213) do
+ActiveRecord::Schema.define(:version => 20120716022638) do
 
   create_table "posts", :force => true do |t|
     t.string   "name"
@@ -45,6 +45,24 @@ ActiveRecord::Schema.define(:version => 20120711013213) do
     t.string   "fb_pic_large"
     t.string   "provider"
     t.string   "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "venues", :force => true do |t|
+    t.integer  "foursquare_id"
+    t.string   "name"
+    t.string   "phone"
+    t.string   "twitter"
+    t.string   "address"
+    t.string   "lat"
+    t.string   "lng"
+    t.integer  "postalcode"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "icon"
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

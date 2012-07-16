@@ -11,12 +11,19 @@
     <%= f.file_field :photo %>
   </p>
   <p>
-    <%= check_box_tag 'whiskey', 'selected' %> Whiskey <br /> 
-    <%= check_box_tag 'gin', 'selected' %> Gin
+    <%= check_box_tag 'whiskey', 'selected' %> Whiskey <br />
+    <%= check_box_tag 'scotch', 'selected' %> Scotch <br />  
+    <%= check_box_tag 'gin', 'selected' %> Gin <br />
+    <%= check_box_tag 'vodka', 'selected' %> Vodka <br />
+    <%= check_box_tag 'rum', 'selected' %> Rum <br />
+    <%= check_box_tag 'tequila', 'selected' %> Tequila <br />
+    <%= check_box_tag 'beer', 'selected' %> Beer <br />
+    <%= check_box_tag 'sake', 'selected' %> Sake <br />
+    <%= check_box_tag 'wine', 'selected' %> Wine <br />
   </p>
   <p>
     <% @venues.each do |v| %>
-      <%= radio_button_tag 'venue', v.name %> <%= v.name %> <br />
+      <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
     <% end %>
   </p>
   <%= hidden_field_tag(:posted_by, current_user.id) %>
