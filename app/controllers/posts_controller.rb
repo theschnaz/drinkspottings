@@ -33,7 +33,7 @@ class PostsController < ApplicationController
       new_venue.address = venue.location['address']
       new_venue.lat = venue.location['lat']
       new_venue.lng = venue.location['lng']
-      new_venue.postcalcode = venue.location['postalCode']
+      new_venue.postalcode = venue.location['postalCode']
       new_venue.city = venue.location['city']
       new_venue.state = venue.location['state']
       new_venue.country = venue.location['country']
