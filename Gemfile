@@ -3,6 +3,11 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 gem 'omniauth-facebook'
 
+#for foursquare
+gem "json"
+gem "typhoeus"
+gem "quimby"
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 gem 'paperclip', "~> 3.0"
