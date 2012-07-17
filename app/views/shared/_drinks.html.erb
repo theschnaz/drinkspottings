@@ -4,7 +4,7 @@
 %>
 
 <div class="multi-columns">
-  <% @posted_and_liked_drinks.each do |f| %>
+  <% @drinks.each do |f| %>
     <%
       tags = Tag.find(:all, :conditions => ["drink_id = ?", f.id])
     %>
