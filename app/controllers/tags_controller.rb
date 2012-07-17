@@ -2,9 +2,11 @@ class TagsController < ApplicationController
 
 
   def show
-    @drink_ids = Tag.find_by_name(params[:id])
+    #@tag = Tag.find_by
+    @drink_ids = Tag.find(:all, :conditions => ["drink_id = ?", params[:id]])
     
     render :json => @drink_ids
+    
   end
 
 
