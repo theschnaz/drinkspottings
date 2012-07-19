@@ -6,6 +6,7 @@
 
 function load()
   {
+  	alert("Page is loaded");
   if (navigator.geolocation)
     {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -14,8 +15,7 @@ function load()
   }
 function showPosition(position)
   {
-  x.innerHTML="Latitude: " + position.coords.latitude + 
-  "<br />Longitude: " + position.coords.longitude;	
+  alert (position.coords.latitude); 
   }
 </script>
 </body>
