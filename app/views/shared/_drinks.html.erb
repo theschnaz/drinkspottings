@@ -15,13 +15,13 @@
       </center>  
       <br />
       <div class="drinkinfo">
-        <a href="/users/<%= f.userid %>"><img src="<%= f.fb_pic_square %>" width="20"/></a><a href="/users/<%= f.userid %>"><%= f.personname %></a> at Bar89.
+        <a href="/users/<%= f.userid %>"><img src="<%= f.fb_pic_square %>" width="20"/></a><a href="/users/<%= f.userid %>"><%= f.personname %></a> at <%= f.venue_name %>.
         "<%= f.description %>"
       </div>
       <br />
       <% tags.each do |d| %>
         <div class="drinktag">
-          <strong><%= d.name %></strong>
+          <strong><a href="/tags/<%= d.name %>"><%= d.name %></a></strong>
         </div>
       <% end %>
     </div>
