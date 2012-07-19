@@ -1,0 +1,15 @@
+<% if current_user.nil? %>
+    <h1>Follow [venue] Drinks on Drinkspottings</h1>
+    Don't miss any drinks from [venue].  Get your account on Drinkspottings today.
+    <br />
+    <strong><a href="/auth/facebook">Sign up today!</a></strong>
+  </div>
+<% end %>
+
+<div class="sidebar-right">
+  <h6 style="margin-bottom:15px;"><%= @venue.name %></h6>
+</div>
+
+<div class="mainarea mainarea-center">
+  <%= render 'shared/drinks' %>
+</div>

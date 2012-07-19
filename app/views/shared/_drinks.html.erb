@@ -15,7 +15,7 @@
       </center>  
       <br />
       <div class="drinkinfo">
-        <a href="/users/<%= f.userid %>"><img src="<%= f.fb_pic_square %>" width="20"/></a><a href="/users/<%= f.userid %>"><%= f.personname %></a> at <%= f.venue_name %>.
+        <a href="/users/<%= f.userid %>"><img src="<%= f.fb_pic_square %>" width="20"/></a><a href="/users/<%= f.userid %>"><%= f.personname %></a> at <a href="/venues/<%= f.venue_id %>"><%= f.venue_name %></a>.
         "<%= f.description %>"
       </div>
       <br />
