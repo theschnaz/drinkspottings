@@ -2,6 +2,12 @@ class PostsController < ApplicationController
 
 
   def new
+  	unless current_user
+   	  flash[:notice] = "You must login first"
+  	  redirect_to "/"
+  	end
+  	  
+  
     @post = Post.new
     
     fourvenue = params[:lat] + "," + params[:long]
