@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body onload="load()">
+
+<p id="demo"></p>
+<p></p>
+
+<script>
+var x=document.getElementById("demo");
+function load()
+  {
+  	
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+function showPosition(position)
+  {
+  x.innerHTML="<a href='http://drinkspottings.com/new?lat=" + position.coords.latitude + 
+  "&long=" + position.coords.longitude + "'>Post a drink</a>"; 
+  }
+</script>
+</body>
+</html>
