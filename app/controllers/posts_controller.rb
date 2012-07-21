@@ -24,12 +24,15 @@ class PostsController < ApplicationController
    # 	"description" => params[:text],
    # 	"photo" => params[:attachment1]
    # }
-    
-    @post = Post.new(params[:post])
-    @post.posted_by = params[:posted_by]
-    @post.save
+   
+   @post = Post.new(params[:post])
+   
+   #by default, set venue id to 0 (no venue)
+   @post.venue_id = 0
     
     if params[:venue]
+      #if the venue ID is already in the DB, just post the drink there
+      @post.venue_id = params[:venue]
       unless(Venue.find_by_foursquare_id(params[:venue]) && params[:venue])
         new_venue = Venue.new
         foursquare = Foursquare::Base.new("G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT", "T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV")
@@ -50,8 +53,15 @@ class PostsController < ApplicationController
         #new_venue.url = venue.url
       
         new_venue.save
+        
+        #if the venue was pulled from 4sq, then use that ID and post the drink there
+        @post.venue_id = new_venue.id
       end
     end
+    
+    
+    @post.posted_by = params[:posted_by]
+    @post.save
     
     if (params[:whiskey] == 'selected')
       @tag = Tag.new
