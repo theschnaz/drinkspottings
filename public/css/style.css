@@ -601,7 +601,8 @@ ul#menu li:hover > .pixel-mega-menu { display: block; }
 .multi-columns .multi-columns { clear: both; margin: 0; }
 .multi-columns .half { 
 	margin-bottom:50px;
-	width: 46%; 
+	width: 46%;
+	height: 460px; 
 	margin-right: 4px;
 	background-color:#ffffff;
 	border-color:#C1B18B;
