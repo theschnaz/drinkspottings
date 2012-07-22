@@ -2,6 +2,7 @@
 <html>
 <body onload="load()">
 
+<h1>Geolocating...</h1>
 <p id="demo"></p>
 <p></p>
 
@@ -19,7 +20,7 @@ function load()
 function showPosition(position)
   {
   x.innerHTML="<h1><a href='http://drinkspottings.com/new?lat=" + position.coords.latitude + 
-  "&long=" + position.coords.longitude + "'>Post a drink</a></h1>"; 
+  "&long=" + position.coords.longitude + "'>Now, post a drink</a></h1>"; 
   }
 </script>
 </body>
