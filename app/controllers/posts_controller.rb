@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   #save the image from the app, then send the user to the next controller
   def new_app
-    @post = Post.new(params[:photo])
+    @post = Post.new(params[:post])
     @post.save
     redirect_to "http://google.com"
   end
