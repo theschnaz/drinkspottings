@@ -1,5 +1,11 @@
 class PostsController < ApplicationController
 
+  #save the image from the app, then send the user to the next controller
+  def new_app
+    @post = Post.new
+    @post = Post.new(params[:post])
+    @post.save
+  end
 
   def new
   	unless current_user
