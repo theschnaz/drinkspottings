@@ -5,6 +5,7 @@ class PostsController < ApplicationController
     @post = Post.new
     @post = Post.new(params[:post])
     @post.save
+    redirect_to "/"
   end
 
   def new
