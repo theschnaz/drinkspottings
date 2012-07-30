@@ -330,7 +330,7 @@ input:focus, textarea:focus {
     width: 100%;
     font-family: 'Arizonia', cursive;
     display: block;
-    font-size: 35px;
+    font-size: 55px;
 }
 body.js-enabled #header #logo h1 {}
 #header #logo h1 a {
@@ -369,7 +369,7 @@ ul#menu > li {
 }
 ul#menu > li > a {
     color: #777163;
-    font: 25px/25px Arial;
+    font: 45px/45px Arial;
     display: block;
     float: left;
     margin: 0 14px;
