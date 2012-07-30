@@ -9,6 +9,7 @@ Drinkspottings::Application.routes.draw do
   
   match "/new" => "posts#new"
   match "/new_app" => "posts#new_app"
+  match "/post_photo_app" => "posts#post_photo_app"
   
   match "/auth/facebook/callback" => "sessions#create"
   match '/signout', :to => 'sessions#destroy'

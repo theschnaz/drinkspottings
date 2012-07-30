@@ -1,11 +1,23 @@
 class PostsController < ApplicationController
 
   #save the image from the app, then send the user to the next controller
-  def new_app
+  def post_photo_app
     @post = Post.new
     @post.photo = params[:photo]
     @post.save
     render :text => @post.id
+  end
+  
+  def new_app
+  	@post = Post.find_by_id(params[:drink_id])
+    
+    fourvenue = params[:lat] + "," + params[:long]
+    
+    #get nearby places from 4sq
+    foursquare = Foursquare::Base.new("G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT", "T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV")
+    @venues =foursquare.venues.nearby(:ll => fourvenue)
+    @venues = @venues[(0..9)]
+  
   end
 
   def new
