@@ -25,8 +25,8 @@ class PostsController < ApplicationController
     @post = Post.find_by_id(params[:drink_id])
     
     #assign values
-    @post.name = params[:name]
-    @post.description = params[:description]
+    @post.name = params[:post][:name]
+    @post.description = params[:post][:description]
     #by default, set venue id to 0 (no venue)
     @post.venue_id = 0
     
