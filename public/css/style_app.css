@@ -297,7 +297,7 @@ input:focus, textarea:focus {
  * HEADER DEFINITION
  * ----------------------------------------------------------*/
 
-#header { position: relative; min-width: 440px; margin: 0 auto; }
+#header { position: relative; width: 440px; margin: 0 auto; }
 #header .header-bar {
     margin: 20px 0 40px 0;
     clear: both;
@@ -625,7 +625,7 @@ ul#menu li:hover > .pixel-mega-menu { display: block; }
  * --------------------------------------------------------- */
 
 #content {
-    min-width: 440px;
+    width: 440px;
     margin: 0 auto;
     padding: 0 0 30px 0;
     min-height: 300px;
