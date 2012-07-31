@@ -330,7 +330,7 @@ input:focus, textarea:focus {
     width: 100%;
     font-family: 'Arizonia', cursive;
     display: block;
-    font-size: 55px;
+    font-size: 85px;
 }
 body.js-enabled #header #logo h1 {}
 #header #logo h1 a {
