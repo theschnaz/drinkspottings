@@ -7,9 +7,13 @@ class SessionsController < ApplicationController
     redirect_to root_url
   end
   
-  def create_app
-   user = User.new
-   user.save
+  def new_user_app
+    uid = params[:uid]
+    user = "no"
+    if User.find_by_uid(uid)
+      user = "yes"
+    end
+    render :text => user
   end
   
   def destroy
