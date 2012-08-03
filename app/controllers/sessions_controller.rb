@@ -9,11 +9,14 @@ class SessionsController < ApplicationController
   
   def new_user_app
     uid = params[:uid]
-    user = "no"
-    if User.find_by_uid(uid)
-      user = "yes"
-    end
-    render :text => user
+    
+    user = FbGraph::User.fetch(uid)
+    
+    #user = "no"
+    #if User.find_by_uid(uid)
+    #  user = "yes"
+    #end
+    render :text => user.name
   end
   
   def destroy

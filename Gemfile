@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'omniauth-facebook'
+gem 'fb_graph', '>=1.6.5'
 
 #for foursquare
 gem "json"
