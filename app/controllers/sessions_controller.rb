@@ -10,6 +10,8 @@ class SessionsController < ApplicationController
   def new_user_app
     uid = params[:uid]
     
+    user = User.find_by_uid(uid)
+    
     unless User.find_by_uid(uid)
      user_data = FbGraph::User.fetch(uid)
      user = User.new
