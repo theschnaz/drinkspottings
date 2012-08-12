@@ -147,7 +147,7 @@ class PostsController < ApplicationController
     #get nearby places from 4sq
     foursquare = Foursquare::Base.new("G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT", "T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV")
     @venues =foursquare.venues.nearby(:ll => fourvenue)
-    @venues = @venues[(0..9)]
+    @venues = @venues[(0..15)]
   end
 
   def create  
@@ -164,7 +164,8 @@ class PostsController < ApplicationController
     
     if params[:venue]
       #if the venue ID is already in the DB, just post the drink there
-      @post.venue_id = params[:venue]
+      venue_in_db = Venue.find_by_foursquare_id(params[:venue])
+      @post.venue_id = venue_in_db.id
       unless(Venue.find_by_foursquare_id(params[:venue]) && params[:venue])
         new_venue = Venue.new
         foursquare = Foursquare::Base.new("G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT", "T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV")
