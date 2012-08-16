@@ -3,6 +3,10 @@ class PostsController < ApplicationController
   #save the image from the app, then send the user to the next controller
   def post_photo_app
     @post = Post.new
+    
+    user = User.find_by_uid
+    @post.posted_by = user.id
+     
     @post.photo = params[:photo]
     @post.save
     render :text => @post.id
