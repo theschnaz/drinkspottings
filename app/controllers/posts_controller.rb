@@ -28,9 +28,6 @@ class PostsController < ApplicationController
   def create_app
     @post = Post.find_by_id(params[:drink_id])
     
-    if (params[:posted_by])
-      current_user.id = params[:posted_by]
-    end
     
     #assign values
     @post.name = params[:post][:name]
@@ -75,63 +72,63 @@ class PostsController < ApplicationController
       @tag = Tag.new
       @tag.drink_id = @post.id
       @tag.name = "Whiskey"
-      @tag.user_id = current_user.id
+      @tag.user_id = @post.posted_by
       @tag.save
     end
     if (params[:scotch] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
       @tag.name = "Scotch"
-      @tag.user_id = current_user.id
+      @tag.user_id = @post.posted_by
       @tag.save
     end
     if (params[:gin] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
       @tag.name = "Gin"
-      @tag.user_id = current_user.id
+      @tag.user_id = @post.posted_by
       @tag.save
     end
     if (params[:vodka] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
       @tag.name = "Vodka"
-      @tag.user_id = current_user.id
+      @tag.user_id = @post.posted_by
       @tag.save
     end
     if (params[:rum] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
       @tag.name = "Rum"
-      @tag.user_id = current_user.id
+      @tag.user_id = @post.posted_by
       @tag.save
     end
     if (params[:tequila] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
       @tag.name = "Tequila"
-      @tag.user_id = current_user.id
+      @tag.user_id = @post.posted_by
       @tag.save
     end
     if (params[:beer] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
       @tag.name = "Beer"
-      @tag.user_id = current_user.id
+      @tag.user_id = @post.posted_by
       @tag.save
     end
     if (params[:sake] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
       @tag.name = "Sake"
-      @tag.user_id = current_user.id
+      @tag.user_id = @post.posted_by
       @tag.save
     end
     if (params[:wine] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
       @tag.name = "Wine"
-      @tag.user_id = current_user.id
+      @tag.user_id = @post.posted_by
       @tag.save
     end
     
