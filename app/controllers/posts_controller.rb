@@ -167,7 +167,7 @@ class PostsController < ApplicationController
       venue_in_db = Venue.find_by_foursquare_id(params[:venue])
       
       #if the venue is in the DB, use its ID, if not, get from 4sq below
-      if venue_in_db.nil?
+      if !venue_in_db.nil?
         @post.venue_id = venue_in_db.id
       end
       unless(Venue.find_by_foursquare_id(params[:venue]) && params[:venue])
