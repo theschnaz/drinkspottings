@@ -165,7 +165,11 @@ class PostsController < ApplicationController
     if params[:venue]
       #if the venue ID is already in the DB, just post the drink there
       venue_in_db = Venue.find_by_foursquare_id(params[:venue])
-      @post.venue_id = venue_in_db.id
+      
+      #if the venue is in the DB, use its ID, if not, get from 4sq below
+      unless venue_in_db.id
+        @post.venue_id = venue_in_db.id
+      end
       unless(Venue.find_by_foursquare_id(params[:venue]) && params[:venue])
         new_venue = Venue.new
         foursquare = Foursquare::Base.new("G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT", "T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV")
