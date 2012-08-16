@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   def post_photo_app
     @post = Post.new
     
-    user = User.find_by_uid
+    user = User.find_by_uid(params[:uid])
     @post.posted_by = user.id
      
     @post.photo = params[:photo]
