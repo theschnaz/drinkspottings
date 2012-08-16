@@ -28,6 +28,10 @@ class PostsController < ApplicationController
   def create_app
     @post = Post.find_by_id(params[:drink_id])
     
+    if (params[:posted_by])
+      current_user.id = params[:posted_by]
+    end
+    
     #assign values
     @post.name = params[:post][:name]
     @post.description = params[:post][:description]
