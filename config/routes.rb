@@ -12,6 +12,8 @@ Drinkspottings::Application.routes.draw do
   match "/post_photo_app" => "posts#post_photo_app"
   match "/create_app" => "posts#create_app"
   
+  match "/app_all" => "iphones#all"
+  
   match "/new_user_app" => "sessions#new_user_app"
   
   match "/auth/facebook/callback" => "sessions#create"
