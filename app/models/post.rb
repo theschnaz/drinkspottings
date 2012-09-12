@@ -13,6 +13,6 @@ class Post < ActiveRecord::Base
     }
     
    def post_url
-     self.url(:medium)
+     self.photo.url(:medium)
    end
 end
