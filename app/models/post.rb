@@ -17,6 +17,6 @@ class Post < ActiveRecord::Base
    end
    
    def tags
-     Tag.find(:all, :conditions => ["drink_id = ?", self.id])
+     Tag.find(:name, :conditions => ["drink_id = ?", self.id])
    end
 end
