@@ -9,7 +9,7 @@ class IphonesController < ApplicationController
 
   end
   
-  def local_drinks
+  def local
     lat = params[:lat].to_f
     long = params[:long].to_f
     
