@@ -13,7 +13,8 @@ class IphonesController < ApplicationController
     lat = params[:lat].to_f
     lng = params[:lng].to_f
 
-    distance = 0.0036
+    #distance = 0.0036
+  	distance = .01
   
     west = lng - distance
     east = lng + distance
