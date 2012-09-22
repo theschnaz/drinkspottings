@@ -11,12 +11,12 @@ class IphonesController < ApplicationController
   
   def local
     lat = params[:lat].to_f
-    long = params[:long].to_f
+    lng = params[:lng].to_f
 
     distance = 0.0036
   
-    west = long - distance
-    east = long + distance
+    west = lng - distance
+    east = lng + distance
     north = lat + distance
     south = lat - distance
     
