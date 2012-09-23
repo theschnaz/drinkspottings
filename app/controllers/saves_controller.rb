@@ -4,13 +4,14 @@ class SavesController < ApplicationController
   def new_save
   	@saved_drink = Save.new
   	
-  	@saved_drink.drink_id = 1
-  	@saved_drink.user_id = 1
+  	@saved_drink.drink_id = params[:drink_id]
+  	@saved_drink.user_id = current_user.id
   	
-  	@saved_drink.save
+  	if current_user
+  	  @saved_drink.save
+  	end
   	
   	redirect_to request.referer
-  	
   end
 
 
