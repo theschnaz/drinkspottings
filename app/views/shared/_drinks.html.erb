@@ -27,14 +27,14 @@
       	<% @saved_drinks.each do |s| %>
       	  <% if s.id == f.id %>
    		    <div class="drinktag">
-       		  <strong>&#150; Drink List</strong>
+       		  <strong><a href="/delete_save?drink_id=<%= f.id %>">&#150; Drink List</a></strong>
      	    </div>
      	    <% posted = true %>
      	  <% end %>
      	<% end %>
      	<% unless posted %>
    	      <div class="drinktag">
-            <strong><a href="/delete_save?drink_id=<%= f.id %>">+ Drink List</a></strong>
+            <strong><a href="/new_save?drink_id=<%= f.id %>">+ Drink List</a></strong>
           </div>
         <% end %>
         <% posted = false %>
