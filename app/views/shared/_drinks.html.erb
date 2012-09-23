@@ -22,9 +22,11 @@
         <% end %>
       </div>
       <br />
-      <div class="drinktag">
-        <strong><a href="/new_save">+Drink List</a></strong>
-      </div>
+      <% if current_user &>
+        <div class="drinktag">
+          <strong><a href="/new_save">+Drink List</a></strong>
+        </div>
+      <% end %>
     </div>
     <% if float == "left"
         float = "right"
