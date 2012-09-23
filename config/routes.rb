@@ -4,6 +4,7 @@ Drinkspottings::Application.routes.draw do
 
   match "/create" => "posts#create"
   
+  match "/new_save" => "saves#new_save"
   
   match "/email" => "posts#create"
   

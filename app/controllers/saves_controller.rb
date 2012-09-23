@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class SavesController < ApplicationController
 
 
   def new_save

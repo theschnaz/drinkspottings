@@ -22,11 +22,9 @@
         <% end %>
       </div>
       <br />
-      <% tags.each do |d| %>
-        <div class="drinktag">
-          <strong><a href="/tags/<%= d.name %>"><%= d.name %></a></strong>
-        </div>
-      <% end %>
+      <div class="drinktag">
+        <strong><a href="/new_save">+Drink List</a></strong>
+      </div>
     </div>
     <% if float == "left"
         float = "right"
