@@ -13,6 +13,11 @@ class SavesController < ApplicationController
   	
   	redirect_to request.referer
   end
+  
+  def delete
+    @saved_drink = Save.find_by_drink_id_and_user_id(params[:drink_id], current_user.id)
+    @saved_drink.delete
+  end
 
 
 end
