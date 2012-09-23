@@ -23,9 +23,15 @@
       </div>
       <br />
       <% if current_user %>
-        <div class="drinktag">
-          <strong><a href="/new_save?drink_id=<%= f.id %>">+Drink List</a></strong>
-        </div>
+      	<% if @saved_drinks.include?(f.id) %>
+   		  <div class="drinktag">
+       		<strong>-Drink List</strong>
+     	  </div>
+        <% else %>
+          <div class="drinktag">
+            <strong><a href="/new_save?drink_id=<%= f.id %>">+Drink List</a></strong>
+          </div>
+        <% end %>
       <% end %>
     </div>
     <% if float == "left"
