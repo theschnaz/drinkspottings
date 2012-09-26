@@ -1,11 +1,14 @@
 <% if current_user %>
-  <h1>Your Saved Drinks</h1>
   <div class="sidebar-left">
     <h6 style="margin-bottom:15px;"><%= current_user.name %></h6>
     <img src="<%= current_user.fb_pic_large %>" /> 
   </div>
   <div class="mainarea mainarea-center">
-    <%= render 'shared/drinks' %>
+  	<% if @drinks %>
+      <%= render 'shared/drinks' %>
+    <% elsif %>
+      <h4>You haven't saved any drinks yest.</h4>
+    <% end %>
   </div>
 <% else %>
   <div rel="B1UACH9A" class="lrdiscoverwidget" data-logo="on" data-background="on" data-share-url="drinkspottings.com" data-css=""></div><script type="text/javascript" src="http://launchrock-ignition.s3.amazonaws.com/ignition.1.1.js"></script>
