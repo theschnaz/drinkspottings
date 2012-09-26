@@ -4,7 +4,7 @@
     <img src="<%= current_user.fb_pic_large %>" /> 
   </div>
   <div class="mainarea mainarea-center">
-  	<% if @drinks %>
+  	<% if @drinks.length == 0 %>
       <%= render 'shared/drinks' %>
     <% elsif %>
       <h4>You haven't saved any drinks yest.</h4>
