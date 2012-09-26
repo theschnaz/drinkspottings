@@ -1,6 +1,7 @@
 Drinkspottings::Application.routes.draw do
 
   root :to => 'pages#home'
+  match "/saved" => "pages#saved_drinks"
 
   match "/create" => "posts#create"
   
