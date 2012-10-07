@@ -3,16 +3,10 @@
 <head>
 
 <script>
+navigator.geolocation.getCurrentPosition(showPosition);
 
-if (navigator.geolocation)
-{
-	navigator.geolocation.getCurrentPosition(showPosition);
-}
 
-function showPosition(position)
-{
-	document.write('<META HTTP-EQUIV="Refresh" CONTENT="1; URL=http://drinkspottings.com/new?lat=1&long=1">'); 
-}
+document.write('<META HTTP-EQUIV="Refresh" CONTENT="1; URL=http://drinkspottings.com/new?lat=1&long=1">'); 
 
 </script> 
 
