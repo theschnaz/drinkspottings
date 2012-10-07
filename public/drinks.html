@@ -4,7 +4,16 @@
 
 <script>
 
-document.write('<META HTTP-EQUIV="Refresh" CONTENT="1; URL=http://google.com">');
+if (navigator.geolocation)
+{
+	navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+function showPosition(position)
+{
+	document.write('<META HTTP-EQUIV="Refresh" CONTENT="1; URL=http://drinkspottings.com/new?lat=' + position.coords.latitude + 
+  '&long=' + position.coords.longitude + '">'); 
+}
 
 </script>
 
@@ -15,25 +24,6 @@ document.write('<META HTTP-EQUIV="Refresh" CONTENT="1; URL=http://google.com">')
 <p id="demo"></p>
 <p></p>
 
-<script>
-var x=document.getElementById("demo");
-function load()
-{
-	if (navigator.geolocation)
-    {
-    	navigator.geolocation.getCurrentPosition(showPosition);
-    }
-  	else
-  	{
-  		x.innerHTML="Geolocation is not supported by this browser.";
-  	}
 
-	function showPosition(position)
-	{
-  		x.innerHTML="<h1><a href='http://drinkspottings.com/new?lat=" + position.coords.latitude + 
-  "&long=" + position.coords.longitude + "'>Now, post a drink</a></h1>"; 
-  	}
-}
-</script>
 </body>
 </html>
