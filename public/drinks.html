@@ -9,19 +9,23 @@ function load()
 { 	
 	alert("in load");
 	if(navigator.geolocation)
-    {
-    	alert("you have geo");
-    	navigator.geolocation.getCurrentPosition(showPosition);
+    {	
+    	navigator.geolocation.getCurrentPosition(
+        	function(position) {
+            	alert("you have geo");
+        	},
+        	function errorCallback(error) {
+            	alert("no geo");
+        	},
+        	{
+            	maximumAge:Infinity,
+            	timeout:5000
+        	}
+    	);
     }
 	else
 	{
 		document.write('Geolocation is not supported by this browser.');
-	}
-
-	function showPosition(position)
-	{
-		alert("i should be writing");
-		document.write('yo'); 
 	}
 }
 </script>
