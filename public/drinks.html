@@ -12,7 +12,8 @@ function load()
     {	
     	navigator.geolocation.getCurrentPosition(
         	function(position) {
-            	document.write('link here');
+            	document.write('<h1><a href="http://drinkspottings.com/new?lat=' + position.coords.latitude + 
+  '&long=' + position.coords.longitude + '">Now, post a drink</a></h1>');
         	},
         	function errorCallback(error) {
             	alert("no geo");
