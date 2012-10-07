@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-<script>
-navigator.geolocation.getCurrentPosition(showPosition);
-
-
-document.write('<META HTTP-EQUIV="Refresh" CONTENT="1; URL=http://twitter.com">'); 
-
-</script> 
-
-</head>
 <body onload="load()">
 
 <h1>Geolocating...</h1>
 <p id="demo"></p>
 <p></p>
 
-
+<script>
+var x=document.getElementById("demo");
+function load()
+  {
+  	
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+function showPosition(position)
+  {
+  document.write('yo');
+  }
+</script>
 </body>
 </html>
