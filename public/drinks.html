@@ -7,8 +7,10 @@
 <script>
 function load()
 { 	
-	if (navigator.geolocation)
+	alert("in load");
+	if(navigator.geolocation)
     {
+    	alert("you have geo");
     	navigator.geolocation.getCurrentPosition(showPosition);
     }
 	else
@@ -18,6 +20,7 @@ function load()
 
 	function showPosition(position)
 	{
+		alert("i should be writing");
 		document.write('yo'); 
 	}
 }
