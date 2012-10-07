@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+
+</head>
 <body onload="load()">
 
 <h1>Geolocating...</h1>
@@ -9,19 +13,22 @@
 <script>
 var x=document.getElementById("demo");
 function load()
-  {
-  	
-  if (navigator.geolocation)
+{
+	if (navigator.geolocation)
     {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    	navigator.geolocation.getCurrentPosition(showPosition);
     }
-  else{x.innerHTML="Geolocation is not supported by this browser.";}
-  }
-function showPosition(position)
-  {
-  x.innerHTML="<h1><a href='http://drinkspottings.com/new?lat=" + position.coords.latitude + 
+  	else
+  	{
+  		x.innerHTML="Geolocation is not supported by this browser.";}
+  	}
+
+	function showPosition(position)
+	{
+  		x.innerHTML="<h1><a href='http://drinkspottings.com/new?lat=" + position.coords.latitude + 
   "&long=" + position.coords.longitude + "'>Now, post a drink</a></h1>"; 
-  }
+  	}
+}
 </script>
 </body>
 </html>
