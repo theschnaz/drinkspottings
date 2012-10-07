@@ -3,16 +3,23 @@
 <body onload="load()">
 
 <h1>Geolocating...</h1>
-<p id="demo"></p>
-<p></p>
 
 <script>
-var x=document.getElementById("demo");
 function load()
 { 	
+	if (navigator.geolocation)
+    {
+    	navigator.geolocation.getCurrentPosition(showPosition);
+    }
+	else
+	{
+		document.write('Geolocation is not supported by this browser.');
+	}
 
+	function showPosition(position)
+	{
 		document.write('yo'); 
-	
+	}
 }
 </script>
 </body>
