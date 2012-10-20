@@ -21,7 +21,6 @@ class PostsController < ApplicationController
     foursquare = Foursquare::Base.new("G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT", "T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV")
     @venues =foursquare.venues.nearby(:ll => fourvenue)
     #@venues = @venues[(0..15)]
-  	redirect_to "www.google.com"
   end
   
   
@@ -62,6 +61,7 @@ class PostsController < ApplicationController
         #if the venue was pulled from 4sq, then use that ID and post the drink there
         @post.venue_id = new_venue.id
       end
+      redirect_to "http://www.google.com"
     end
     
     
