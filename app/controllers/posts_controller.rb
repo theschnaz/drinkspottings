@@ -61,7 +61,6 @@ class PostsController < ApplicationController
         #if the venue was pulled from 4sq, then use that ID and post the drink there
         @post.venue_id = new_venue.id
       end
-      redirect_to "http://www.google.com"
     end
     
     
@@ -132,7 +131,7 @@ class PostsController < ApplicationController
       @tag.save
     end
     
-    redirect_to "/"
+    redirect_to "http://google.com"
     
   
   end
