@@ -13,6 +13,7 @@ class PostsController < ApplicationController
   end
   
   def new_app
+  	@mobile = true
   	@post = Post.find_by_id(params[:drink_id])
     
     fourvenue = params[:lat] + "," + params[:long]
@@ -131,7 +132,7 @@ class PostsController < ApplicationController
       @tag.save
     end
     
-    redirect_to "http://google.com"
+    render :text => "Drink posted =)"
     
   
   end
