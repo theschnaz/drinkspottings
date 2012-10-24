@@ -18,7 +18,9 @@
 </head>
 <body>
   <% if @mobile %>
-    <%= yield %>
+    <div style="width:400px; padding-left:20px;">
+      <%= yield %>
+    </div>
   <% else %>
     <div id="root">
       <%= render 'layouts/header' %>
