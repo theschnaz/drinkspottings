@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120923003817) do
+ActiveRecord::Schema.define(:version => 20121024003026) do
 
   create_table "posts", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20120923003817) do
     t.datetime "updated_at"
     t.string   "image"
     t.integer  "venue_id"
+    t.integer  "rating"
   end
 
   create_table "saves", :force => true do |t|
