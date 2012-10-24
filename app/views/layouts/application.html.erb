@@ -17,15 +17,17 @@
 
 </head>
 <body>
-  <div id="root">
-  	<% unless @mobile %>
+  <% if @mobile %>
+    <%= yield %>
+  <% else %>
+    <div id="root">
       <%= render 'layouts/header' %>
-    <% end %>
-    <div id="content">
-	  <div class="mainarea">
-        <%= yield %>
+      <div id="content">
+	    <div class="mainarea">
+          <%= yield %>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 </body>
 </html>
