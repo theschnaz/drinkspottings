@@ -6,9 +6,10 @@ Drinkspottings::Application.routes.draw do
   match "/create" => "posts#create"
   
   match "/new_save" => "saves#new_save"
-  match "/delete_save" => "saves#delete"
+  match "/delete_save" => "saves#delete_save"
   
   match "/new_save_app" => "saves#new_save_app"
+  match "/delete_save_app" => "saves#delete_save_app"
   
   match "/email" => "posts#create"
   

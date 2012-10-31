@@ -27,12 +27,18 @@ class SavesController < ApplicationController
   	render :text => "saved"
   end
   
-  def delete
+  def delete_save
     @saved_drink = Save.find_by_drink_id_and_user_id(params[:drink_id], current_user.id)
     @saved_drink.delete
     
     redirect_to request.referer
   end
 
-
+  def delete_save_app
+    user = User.find_by_uid(params[:uid])
+    @saved_drink = Save.find_by_drink_id_and_user_id(params[:drink_id], user.id)
+    @saved_drink.delete
+    
+    render :text => "unsaved"
+  end
 end
