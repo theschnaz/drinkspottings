@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
    end
    
    def saved_by
-     Save.find_by_sql ['SELECT "users".uid FROM "users", "saves" WHERE "saves".user_id = "users".id AND "saves".id = \'' + self.id + '\']
+     Save.find_by_sql ['SELECT "users".uid FROM "users", "saves" WHERE "saves".user_id = "users".id AND "saves".id = \'' + self.id + '\'']
    end
    
    def tags
