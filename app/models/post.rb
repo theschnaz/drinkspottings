@@ -16,8 +16,8 @@ class Post < ActiveRecord::Base
      self.photo.url(:medium)
    end
    
-   def saved_list
-     Save.find_by_drink_id_and_user_id(self.id, @user.id)
+   def saved_by
+     Save.find_by_sql ['SELECT "users".uid FROM "users", "saves" WHERE "saves".user_id = "users".id AND "saves".id = \'' + self.id + '\']
    end
    
    def tags

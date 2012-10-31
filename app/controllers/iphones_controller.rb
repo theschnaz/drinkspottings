@@ -9,7 +9,7 @@ class IphonesController < ApplicationController
     
     
     #render :json => @drinks.to_json(:methods => [:post_url, :tags])
-	render :json => @drinks.to_json(:methods => [:post_url, :saved_list])
+	render :json => @drinks.to_json(:methods => [:post_url, :saved_by])
 
   end
   
