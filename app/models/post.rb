@@ -16,6 +16,10 @@ class Post < ActiveRecord::Base
      self.photo.url(:medium)
    end
    
+   def saved_list
+     true
+   end
+   
    def tags
      Tag.find(:all, :select => "name", :conditions => ["drink_id = ?", self.id])
    end
