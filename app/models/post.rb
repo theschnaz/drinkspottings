@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
    end
    
    def saved_list
-     true
+     saved_drink = Save.find_by_drink_id_and_user_id(self.id, @user.id)
    end
    
    def tags
