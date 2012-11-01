@@ -4,9 +4,17 @@
     <%= f.text_field :name %>
   </p>
   <p>
+    <%= f.radio_button :rating, '1' %> 1 <br />
+    <%= f.radio_button :rating, '2' %> 2 <br />
+    <%= f.radio_button :rating, '3' %> 3 <br />
+    <%= f.radio_button :rating, '4' %> 4 <br />
+    <%= f.radio_button :rating, '5' %> 5 <br />
+  </p>
+  <p>
     <%= f.label :description %><br />
     <%= f.text_area :description, :rows => 10 %>
   </p>
+  <p><%= f.submit "Submit" %></p>
   <p>
     <%= check_box_tag 'whiskey', 'selected' %> Whiskey <br />
     <%= check_box_tag 'scotch', 'selected' %> Scotch <br />  
