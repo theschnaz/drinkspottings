@@ -32,6 +32,7 @@ class PostsController < ApplicationController
     #assign values
     @post.name = params[:post][:name]
     @post.description = params[:post][:description]
+    @post.rating = params[:post][:rating]
     #by default, set venue id to 0 (no venue)
     @post.venue_id = 0
     
