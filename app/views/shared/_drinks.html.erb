@@ -16,16 +16,16 @@
       </center>  
       <br />
       <div class="drinkinfo">
-        <a href="/users/<%= f.userid %>"><img src="<%= f.fb_pic_square %>" width="20"/></a><a href="/users/<%= f.userid %>">
+        <a href="/users/<%= f.userid %>"><img src="<%= f.fb_pic_square %>" width="20"/></a>
         <% i = 0  %>
         <% unless f.rating.nil? %>
           <% while i < f.rating %>
-            star
+            <img src="/star.jpeg" />
             <% i += 1 %>
           <% end %>
         <% end %>
         <br />
-        <%= f.personname %></a> at <a href="/venues/<%= f.venue_id %>"><%= f.venue_name %></a>
+        <a href="/users/<%= f.userid %>"><%= f.personname %></a> at <a href="/venues/<%= f.venue_id %>"><%= f.venue_name %></a>
         <br />
         <% if f.description %>
           "<%= f.description %>"
