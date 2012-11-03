@@ -18,9 +18,11 @@
       <div class="drinkinfo">
         <a href="/users/<%= f.userid %>"><img src="<%= f.fb_pic_square %>" width="20"/></a><a href="/users/<%= f.userid %>">
         <% i = 0  %>
-        <% while i < f.rating %>
-          star
-          <% i += 1 %>
+        <% unless f.rating.nil? %>
+          <% while i < f.rating %>
+            star
+            <% i += 1 %>
+          <% end %>
         <% end %>
         <br />
         <%= f.personname %></a> at <a href="/venues/<%= f.venue_id %>"><%= f.venue_name %></a>
