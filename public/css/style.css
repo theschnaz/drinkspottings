@@ -603,7 +603,7 @@ ul#menu li:hover > .pixel-mega-menu { display: block; }
 	margin-bottom:50px;
 	width: 46%;
 	height: 530px;
-	overflow:scroll; 
+	overflow-y:auto; 
 	margin-right: 4px;
 	background-color:#ffffff;
 	border-color:#C1B18B;
