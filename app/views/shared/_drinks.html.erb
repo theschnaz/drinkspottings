@@ -20,6 +20,7 @@
         <% i = 0  %>
         <% until i > f.rating %>
           star
+          <% i ++ %>
         <% end %>
         <br />
         <%= f.personname %></a> at <a href="/venues/<%= f.venue_id %>"><%= f.venue_name %></a>
