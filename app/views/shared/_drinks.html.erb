@@ -16,7 +16,13 @@
       </center>  
       <br />
       <div class="drinkinfo">
-        <a href="/users/<%= f.userid %>"><img src="<%= f.fb_pic_square %>" width="20"/></a><a href="/users/<%= f.userid %>"><%= f.personname %></a> at <a href="/venues/<%= f.venue_id %>"><%= f.venue_name %></a>
+        <a href="/users/<%= f.userid %>"><img src="<%= f.fb_pic_square %>" width="20"/></a><a href="/users/<%= f.userid %>">
+        <% i = 0  %>
+        <% until i > f.rating %>
+          star
+        <% end %>
+        <br />
+        <%= f.personname %></a> at <a href="/venues/<%= f.venue_id %>"><%= f.venue_name %></a>
         <br />
         <% if f.description %>
           "<%= f.description %>"
