@@ -4,6 +4,6 @@ class ChangeDataTypeForDescription < ActiveRecord::Migration
   end
 
   def down
-  	change_column :posts, :body, :description, :limit => '255'
+  	change_column :posts, :description, :text, :limit => '255'
   end
 end
