@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121024003026) do
+ActiveRecord::Schema.define(:version => 20121103235150) do
 
   create_table "posts", :force => true do |t|
     t.string   "name"
-    t.string   "description"
+    t.text     "description"
     t.integer  "posted_by"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
