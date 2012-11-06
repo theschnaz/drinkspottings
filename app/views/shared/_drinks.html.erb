@@ -16,11 +16,11 @@
       </center>  
       <br />
       <div class="drinkinfo">
-        <a href="/users/<%= f.userid %>"><img src="<%= f.fb_pic_square %>" width="20"/></a>
+        <a href="/users/<%= f.userid %>"><img src="<%= f.fb_pic_square %>" width="40"/></a>
         <% i = 0  %>
         <% unless f.rating.nil? %>
           <% while i < f.rating %>
-            <img src="/star.jpeg" />
+            <img src="/heart.png" />
             <% i += 1 %>
           <% end %>
         <% end %>
