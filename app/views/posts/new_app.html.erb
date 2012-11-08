@@ -1,4 +1,12 @@
-<%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true } do |f| %>
+<script>
+  function validateForm()
+  {
+    alert("Not a valid e-mail address");
+    return false;
+  }
+</script>
+
+<%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true, :onsubmit => "return validateForm();" } do |f| %>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
