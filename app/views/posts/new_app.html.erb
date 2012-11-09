@@ -2,19 +2,27 @@
 function validateForm()
 {
   var f_name = document.forms["add_drink"]["name"].value;
-  var f_rating = document.forms["add_drink"]["rating"].value;
   
+  var frm = document.form["add_drink"];
+  f_rating = frm.elements["rating"];
+    
   if (f_name==null || f_name=="")
   {
-    alert("First name must be filled out");
+    alert("Please name your drink.");
     return false;
   }
   
-  if (f_rating==null || f_rating=="")
-  {
-    alert("First name must be filled out");
-    return false;
-  }
+  for(var i = 0; i < f_rating.length; i++)
+   {
+      if(f_rating[i].checked)
+      {
+      	 alert(f_rating[i]);
+         return true;
+      }
+   }
+   
+   alert("Please rate your drink.");
+   return false;
 }
 </script>
 
@@ -25,11 +33,11 @@ function validateForm()
   </p>
   <p style="padding-left:2px;">
   	<%= f.label :rating %><br />
-    <%= f.radio_button :rating, '1' %> <img src="/heart.png" width"15" /> <br />
-    <%= f.radio_button :rating, '2' %> <img src="/heart.png" width"15" /> <img src="/heart.png" width"15" /> <br />
-    <%= f.radio_button :rating, '3' %> <img src="/heart.png" width"15" /> <img src="/heart.png" width"15" /> <img src="/heart.png" width"15" /> <br />
-    <%= f.radio_button :rating, '4' %> <img src="/heart.png" width"15" /> <img src="/heart.png" width"15" /> <img src="/heart.png" width"15" /> <img src="/heart.png" width"15" /> <br />
-    <%= f.radio_button :rating, '5' %> <img src="/heart.png" width"15" /> <img src="/heart.png" width"15" /> <img src="/heart.png" width"15" /> <img src="/heart.png" width"15" /> <img src="/heart.png" width"15" /> <br />
+    <%= f.radio_button :rating, '1' %> <img src="/heart.png" width="15" /> <br />
+    <%= f.radio_button :rating, '2' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
+    <%= f.radio_button :rating, '3' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
+    <%= f.radio_button :rating, '4' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
+    <%= f.radio_button :rating, '5' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
   </p>
   <p><%= f.submit "Submit" %></p>
   <p>
