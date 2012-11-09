@@ -9,14 +9,12 @@
       alert("Please name and rate your drink");
       return false;
   	}
-  	
-  	if (name==null || name=="")
+  	else if (name==null || name=="")
   	{
   	  alert("Please name your drink");
       return false;
   	}
-  	
-  	if (rating==null || rating="")
+  	else if (rating==null || rating="")
   	{
   	  alert("Please rate your drink");
       return false;
@@ -37,11 +35,11 @@
     <%= f.radio_button :rating, '4' %> <img src="/star.jpeg" /> <img src="/star.jpeg" /> <img src="/star.jpeg" /> <img src="/star.jpeg" /> <br />
     <%= f.radio_button :rating, '5' %> <img src="/star.jpeg" /> <img src="/star.jpeg" /> <img src="/star.jpeg" /> <img src="/star.jpeg" /> <img src="/star.jpeg" /> <br />
   </p>
+  <p><%= f.submit "Submit" %></p>
   <p>
     <%= f.label :description %><br />
     <%= f.text_area :description, :rows => 10 %>
   </p>
-  <p><%= f.submit "Submit" %></p>
   <p>
     <%= check_box_tag 'whiskey', 'selected' %> Whiskey <br />
     <%= check_box_tag 'scotch', 'selected' %> Scotch <br />  
