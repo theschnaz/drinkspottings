@@ -1,24 +1,13 @@
 <script>
-  function validateForm()
+function validateForm()
+{
+  var f_name = document.forms["add_drink"]["name"].value;
+  if (f_name==null || f_name=="")
   {
-  	var name = document.forms["add_drink"]["name"].value;
-  	var rating = document.forms["add_drink"]["rating"].value;
-  	
-  	if (name==null || name=="")
-  	{
-      alert("Please name your drink");
-      return false;
-  	}
-  	else if (rating==null || rating=="")
-  	{
-  	  alert("Please rate your drink");
-      return false;
-  	}
-  	else {
-  	  alert("name = " + name + " rating = " + rating);
-  	  return true;
-  	}
+    alert("First name must be filled out");
+    return false;
   }
+}
 </script>
 
 <%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true, :name => 'add_drink', :onsubmit => "return validateForm();" } do |f| %>
