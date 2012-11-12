@@ -1,32 +1,4 @@
-<script>
-function validateForm()
-{
-  var f_name = document.forms["add_drink"]["name"].value;
-  
-  var frm = document.forms["add_drink"];
-  f_rating = frm.elements["rating"];
-    
-  if (f_name==null || f_name=="")
-  {
-    alert("Please name your drink.");
-    return false;
-  }
-  
-  for(var i = 0; i < f_rating.length; i++)
-   {
-      if(f_rating[i].checked)
-      {
-      	 alert(f_rating[i]);
-         return true;
-      }
-   }
-   
-   alert("Please rate your drink.");
-   return false;
-}
-</script>
-
-<%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true, :name => 'add_drink', :onsubmit => "return validateForm();" } do |f| %>
+<%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true, :name => 'add_drink' } do |f| %>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
