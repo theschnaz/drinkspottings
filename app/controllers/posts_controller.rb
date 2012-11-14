@@ -27,13 +27,13 @@ class PostsController < ApplicationController
   
   def create_app
   	unless params[:post][:name]
-  		redirect_to request.referer
+  		redirect_to request.referer and return
   	end
   	unless params[:post][:rating]
-  		redirect_to request.referer
+  		redirect_to request.referer and return
   	end
   	unless params[:venue]
-  		redirect_to request.referer
+  		redirect_to request.referer and return
   	end
   	
     @post = Post.find_by_id(params[:drink_id])
