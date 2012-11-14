@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   
   def new_app
   	if request.referer
-  	  @error = request.referer.truncate(34)
+  	  @error = request.referer.truncate(36)
   	end
   
   	@mobile = true
