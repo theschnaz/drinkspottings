@@ -26,6 +26,16 @@ class PostsController < ApplicationController
   
   
   def create_app
+  	unless params[:post][:name]
+  		redirect_to request.referer
+  	end
+  	unless params[:post][:rating]
+  		redirect_to request.referer
+  	end
+  	unless params[:venue]
+  		redirect_to request.referer
+  	end
+  	
     @post = Post.find_by_id(params[:drink_id])
     
     
