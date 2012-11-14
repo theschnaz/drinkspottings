@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
   
   def new_app
-  	@error = params[:error]
+  	@error = params[:flash]
   
   	@mobile = true
   	@post = Post.find_by_id(params[:drink_id])
@@ -29,14 +29,9 @@ class PostsController < ApplicationController
   
   def create_app
   	unless params[:post][:name]
-  		redirect_to :back, :error => 'name' and return
+  		redirect_to :back, :flash => 'name' and return
   	end
-  	unless params[:post][:rating]
-  		redirect_to request.referer and return
-  	end
-  	unless params[:venue]
-  		redirect_to request.referer and return
-  	end
+
   	
     @post = Post.find_by_id(params[:drink_id])
     
