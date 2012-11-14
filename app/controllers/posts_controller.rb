@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
   
   def new_app
-  	@error = request.referer[0...34]
+  	@error = request.referer.truncate(34)
   
   	@mobile = true
   	@post = Post.find_by_id(params[:drink_id])
