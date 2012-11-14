@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   
   
   def create_app
-  	unless params[:post][:name]
+  	unless params[:post][:name] == ""
   		redirect_to :back, :flash => 'name' and return
   	end
 
