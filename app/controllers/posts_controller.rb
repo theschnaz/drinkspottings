@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   
   def create_app
   	unless params[:post][:name]
-  		redirect_to request.referer :error => 'name' and return
+  		redirect_to :back, :error => 'name' and return
   	end
   	unless params[:post][:rating]
   		redirect_to request.referer and return
