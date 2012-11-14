@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   
   def new_app
   	if request.referer
-  	  @error = request.referer.truncate(36)
+  	  @error = "Please name, rate, and post your drink at a venue."
   	end
   
   	@mobile = true
@@ -30,8 +30,14 @@ class PostsController < ApplicationController
   
   
   def create_app
-  	if params[:post][:name]
+  	if params[:post][:name] == ""
   		redirect_to request.referer and return
+  	end
+  	if params[:post][:rating] == ""
+  		redirect_to request.referer and return
+  	end
+  	unless params[:venue]
+  	  redirect_to request.referer and return
   	end
   	
     @post = Post.find_by_id(params[:drink_id])
