@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
   
   def new_app
-  	@error = params[:flash]
+  	@error = request.referer
   
   	@mobile = true
   	@post = Post.find_by_id(params[:drink_id])
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   
   def create_app
   	if params[:post][:name]
-  		redirect_to :back, :flash => 'error' and return
+  		redirect_to request.referer and return
   	end
   	
     @post = Post.find_by_id(params[:drink_id])
