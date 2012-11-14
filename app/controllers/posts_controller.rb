@@ -13,6 +13,8 @@ class PostsController < ApplicationController
   end
   
   def new_app
+  	@error = params[:error]
+  
   	@mobile = true
   	@post = Post.find_by_id(params[:drink_id])
     
@@ -27,7 +29,7 @@ class PostsController < ApplicationController
   
   def create_app
   	unless params[:post][:name]
-  		redirect_to request.referer and return
+  		redirect_to request.referer :error => 'name' and return
   	end
   	unless params[:post][:rating]
   		redirect_to request.referer and return

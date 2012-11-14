@@ -1,3 +1,5 @@
+Error = <%= @error %>
+
 <%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true, :name => 'add_drink' } do |f| %>
   <p>
     <%= f.label :name %><br />
