@@ -21,6 +21,7 @@ Drinkspottings::Application.routes.draw do
   match "/app_all" => "iphones#all"
   match "/app_local" => "iphones#local"
   match "app_saves" => "iphones#saves"
+  match "app_saves_local" => "iphones#saves_local"
   
   match "/new_user_app" => "sessions#new_user_app"
   
