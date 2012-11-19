@@ -4,7 +4,7 @@ class IphonesController < ApplicationController
   
   	@user = User.find_by_uid(params[:uid])
 
-    @drinks = Post.find_by_sql ['SELECT "posts".*, "users".name as personname, "users".fb_pic_square, "users".id as userid, "venues".id as venue_id, "venues".name as venue_name FROM "posts", "users", "venues" WHERE "posts".venue_id = "venues".id AND "posts".posted_by = "users".id ORDER BY posts.created_at DESC']
+    @drinks = Post.find_by_sql ['SELECT "posts".*, "users".name as personname, "users".fb_pic_square, "users".id as userid, "venues".id as venue_id, "venues".name as venue_name FROM "posts", "users", "venues" WHERE "posts".venue_id = "venues".id AND "posts".posted_by = "users".id ORDER BY posts.created_at DESC LIMIT 0, 15']
     
     
     
@@ -25,7 +25,7 @@ class IphonesController < ApplicationController
     north = lat + distance
     south = lat - distance
     
-    @drinks = Post.find_by_sql ['SELECT "posts".*, "users".name as personname, "users".fb_pic_square, "users".id as userid, "venues".id as venue_id, "venues".name as venue_name FROM "posts", "users", "venues" WHERE "posts".venue_id = "venues".id AND "posts".posted_by = "users".id AND "venues".lat >= \'' + south.to_s + '\' AND "venues".lat <= \'' + north.to_s + '\' AND "venues".lng >= \'' + east.to_s + '\' AND "venues".lng <= \'' + west.to_s + '\' ORDER BY posts.created_at DESC']
+    @drinks = Post.find_by_sql ['SELECT "posts".*, "users".name as personname, "users".fb_pic_square, "users".id as userid, "venues".id as venue_id, "venues".name as venue_name FROM "posts", "users", "venues" WHERE "posts".venue_id = "venues".id AND "posts".posted_by = "users".id AND "venues".lat >= \'' + south.to_s + '\' AND "venues".lat <= \'' + north.to_s + '\' AND "venues".lng >= \'' + east.to_s + '\' AND "venues".lng <= \'' + west.to_s + '\' ORDER BY posts.created_at DESC LIMIT 0, 15']
     
     render :json => @drinks.to_json(:methods => [:post_url, :saved_by])
   
@@ -34,7 +34,7 @@ class IphonesController < ApplicationController
   def saves
     @user = User.find_by_uid(params[:uid])
 
-    @drinks = Post.find_by_sql ['SELECT "posts".*, "users".name as personname, "users".fb_pic_square, "users".id as userid, "venues".id as venue_id, "venues".name as venue_name FROM "posts", "users", "venues", "saves" WHERE "posts".venue_id = "venues".id AND "posts".posted_by = "users".id AND "posts".id = "saves".drink_id AND "saves".user_id = 														\'' + @user.id.to_s + '\' ORDER BY saves.id DESC']
+    @drinks = Post.find_by_sql ['SELECT "posts".*, "users".name as personname, "users".fb_pic_square, "users".id as userid, "venues".id as venue_id, "venues".name as venue_name FROM "posts", "users", "venues", "saves" WHERE "posts".venue_id = "venues".id AND "posts".posted_by = "users".id AND "posts".id = "saves".drink_id AND "saves".user_id = 														\'' + @user.id.to_s + '\' ORDER BY saves.id DESC LIMIT 0, 15']
     
     
     
@@ -56,7 +56,7 @@ class IphonesController < ApplicationController
     
   	@user = User.find_by_uid(params[:uid])
 
-    @drinks = Post.find_by_sql ['SELECT "posts".*, "users".name as personname, "users".fb_pic_square, "users".id as userid, "venues".id as venue_id, "venues".name as venue_name FROM "posts", "users", "venues", "saves" WHERE "posts".venue_id = "venues".id AND "posts".posted_by = "users".id AND "posts".id = "saves".drink_id AND "saves".user_id = 														\'' + @user.id.to_s + '\' AND "venues".lat >= \'' + south.to_s + '\' AND "venues".lat <= \'' + north.to_s + '\' AND "venues".lng >= \'' + east.to_s + '\' AND "venues".lng <= \'' + west.to_s + '\' ORDER BY saves.id DESC']
+    @drinks = Post.find_by_sql ['SELECT "posts".*, "users".name as personname, "users".fb_pic_square, "users".id as userid, "venues".id as venue_id, "venues".name as venue_name FROM "posts", "users", "venues", "saves" WHERE "posts".venue_id = "venues".id AND "posts".posted_by = "users".id AND "posts".id = "saves".drink_id AND "saves".user_id = 														\'' + @user.id.to_s + '\' AND "venues".lat >= \'' + south.to_s + '\' AND "venues".lat <= \'' + north.to_s + '\' AND "venues".lng >= \'' + east.to_s + '\' AND "venues".lng <= \'' + west.to_s + '\' ORDER BY saves.id DESC LIMIT 0, 15']
     
     #render :json => @drinks.to_json(:methods => [:post_url, :tags])
 	render :json => @drinks.to_json(:methods => [:post_url, :saved_by])
