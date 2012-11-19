@@ -51,6 +51,8 @@ body {
     background: #fff url('../images/bkg-pattern.jpg') repeat left top;
 }
 
+@font-face { font-family: Ed-Script; src: url('/fonts/Ed-Script.otf'); } 
+
 /* ----------------------------------------------------------
  * HEADLINES
  * ----------------------------------------------------------*/
@@ -58,7 +60,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 2px 0 0 0;
-    font-family: Arial;
+    font-family: Ed-Script;
     font-weight: normal;
     color: #37342d;
     margin-bottom: 30px;
