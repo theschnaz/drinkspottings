@@ -47,8 +47,8 @@ body {
     font-family: Arial, Verdana;
     font-size: 62.5%;
     cursor: default;
-    color: #eadfc1;
-    background: #fff url('../images/bkg-pattern.jpg') repeat left top;
+    background-color: #eadfc1;
+    //background: #fff url('../images/bkg-pattern.jpg') repeat left top;
 }
 
 @font-face { font-family: Ed-Script; src: url('/fonts/Ed-Script.otf'); } 
