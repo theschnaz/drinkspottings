@@ -364,10 +364,10 @@ body.js-enabled #header #logo h1 {}
 
 #round
 {
--moz-border-image:url("/images/border-bottom.png") 30 30 round; /* Firefox */
--webkit-border-image:url("/images/border-bottom.png") 30 30 round; /* Safari */
--o-border-image:url("/images/border-bottom.png") 30 30 round; /* Opera */
-border-image:url("/images/border-bottom.png") 30 30 round;
+
+	-moz-border-image:url("/images/border-bottom.png") 25 30 10 20 repeat;
+	-webkit-border-image:url("/images/border-bottom.png") 25 30 10 20 repeat;
+	border-image:url("/images/border-bottom.png") 25 30 10 20 repeat;
 }
 
 /* ----------------------------------------------------------
