@@ -8,6 +8,8 @@ class PagesController < ApplicationController
       #@user = current_user
       #this will display all drinks from all users
       @drinks = Post.find_by_sql ['SELECT "posts".*, "users".name as personname, "users".fb_pic_square, "users".id as userid, "venues".id as venue_id, "venues".name as venue_name FROM "posts", "users", "venues" WHERE "posts".venue_id = "venues".id AND "posts".posted_by = "users".id ORDER BY posts.created_at DESC']
+    else
+      @home_no_current_user = true
     end
     
     if current_user
