@@ -362,6 +362,14 @@ body.js-enabled #header #logo h1 {}
 	padding-top:5px;
 }
 
+#round
+{
+-moz-border-image:url("/images/border-bottom.png") 30 30 round; /* Firefox */
+-webkit-border-image:url("/images/border-bottom.png") 30 30 round; /* Safari */
+-o-border-image:url("/images/border-bottom.png") 30 30 round; /* Opera */
+border-image:url("/images/border-bottom.png") 30 30 round;
+}
+
 /* ----------------------------------------------------------
  * MAIN MENU DEFINITION
  * ----------------------------------------------------------*/
