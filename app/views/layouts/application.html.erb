@@ -27,7 +27,9 @@
     </div>
   <% else %>
     <div id="root">
-      <%= render 'layouts/header' %>
+      <% if current_user %>
+        <%= render 'layouts/header' %>
+      <% end %>
       <div id="content">
 	    <div class="mainarea">
           <%= yield %>
