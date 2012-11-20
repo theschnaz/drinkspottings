@@ -118,7 +118,7 @@ h1 span.colored, h2 span.colored, h3 span.colored, h4 span.colored, h5 span.colo
 p {
     color: #37342d;
     font: 13px/21px Arial;
-    padding-bottom: 26px;
+    padding-bottom: 10px;
 }
 
 a { color: #ca9351; text-decoration: none; }
