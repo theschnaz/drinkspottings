@@ -362,13 +362,6 @@ body.js-enabled #header #logo h1 {}
 	padding-top:5px;
 }
 
-#round
-{
-
-	-moz-border-image:url("/images/border-bottom.png") 25 30 10 20 repeat;
-	-webkit-border-image:url("/images/border-bottom.png") 25 30 10 20 repeat;
-	border-image:url("/images/border-bottom.png") 25 30 10 20 repeat;
-}
 
 /* ----------------------------------------------------------
  * MAIN MENU DEFINITION
