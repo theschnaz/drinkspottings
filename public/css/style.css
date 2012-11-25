@@ -305,7 +305,7 @@ input:focus, textarea:focus {
     clear: both;
     height: 79px;
     /*background: transparent url('../images/header-bar-bkg.png') repeat-x left top;*/
-    //background: transparent url('../images/logo-fg.png') repeat-x left top;
+    /*background: transparent url('../images/logo-fg.png') repeat-x left top;*/
     position: relative;
 }
 
@@ -394,7 +394,6 @@ ul#menu > li > a {
     margin: 0 14px;
     height: 15px;
     padding: 12px 0;
-    margin-top: 22px;
     vertical-align: top;
     text-transform: uppercase;
 }
