@@ -121,7 +121,7 @@ p {
     padding-bottom: 10px;
 }
 
-a { color: #ca9351; text-decoration: none; }
+a { color: #d05c27; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 img {
@@ -316,7 +316,7 @@ input:focus, textarea:focus {
     width: auto;
     position: relative;
     vertical-align: top;
-    top: -24px;
+    top: 13px;
     float: left;
 }
 #header #logo h1 {

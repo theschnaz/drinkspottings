@@ -1,12 +1,9 @@
 <% if current_user %>
   <div class="sidebar-left">
-    <a href="/users/<%= current_user.id %>" ><img src="<%= current_user.fb_pic_square %>" /> <%= current_user.name %></a>
-    <br />
-    <a href="http://drinkspottings.com/drinks.html">Post a drink</a>
-    <br />
-    <a href="/">Drink Feed</a>
-    <br />
-    <a href="/saved">Saved Drinks</a>
+    <a href="/users/<%= current_user.id %>" ><img src="<%= current_user.fb_pic_square %>" /> <strong><%= current_user.name %></strong></a>
+    <p><a href="http://drinkspottings.com/drinks.html"><strong>Post a drink</strong></a></p>
+    <p><a href="/"><strong>Drink Feed</strong></a></p>
+    <p><a href="/saved"><strong>Saved Drinks</strong></a></p>
   </div>
   <div class="mainarea mainarea-center">
     <%= render 'shared/drinks' %>
