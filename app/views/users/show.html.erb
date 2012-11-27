@@ -6,9 +6,10 @@
   </div>
 <% end %>
 
-<div class="sidebar-right">
-  <h6 style="margin-bottom:15px;"><%= @user.name %></h6>
-  <img src="<%= @user.fb_pic_large %>" /> 
+<div class="sidebar-left">
+  <img src="<%= @user.fb_pic_large %>" />
+  <p style="font-size:18px;"><strong><%= @user.name %></strong></p>
+  <%= @drinks.count %> 
 </div>
 
 <div class="mainarea mainarea-center">
