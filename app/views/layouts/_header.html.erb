@@ -5,11 +5,11 @@
     </div> 
     <% if current_user %>
       <p>
-        <%= link_to "Log Out", signout_path %>
+        <div style="float:right;padding-top:19px;"><%= link_to "Log Out", signout_path %></div>
       </p>
     <% else %>
       <p>
-        <%= link_to "Log In", "/auth/facebook" %>
+        <div style="float:right;padding-top:19px;"><%= link_to "Log In", "/auth/facebook" %></div>
       </p>
     <% end %>
   </div>
