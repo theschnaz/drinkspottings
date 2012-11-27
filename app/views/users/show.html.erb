@@ -7,9 +7,9 @@
 <% end %>
 
 <div class="sidebar-left">
+  <p style="font-size:24px;"><strong><%= @user.name %></strong></p>
   <img src="<%= @user.fb_pic_large %>" />
-  <p style="font-size:18px;"><strong><%= @user.name %></strong></p>
-  <%= @drinks.count %> 
+  <p><%= @drinks.count %> drinks spotted</p>
 </div>
 
 <div class="mainarea mainarea-center">
