@@ -51,7 +51,8 @@ body {
     //background: #fff url('../images/bkg-pattern.jpg') repeat left top;
 }
 
-@font-face { font-family: Ed-Script; src: url('/fonts/Ed-Script.otf'); } 
+@font-face { font-family: Ed-Script; src: url('/fonts/Ed-Script.otf'); }
+@font-face { font-family: Archer-Book; src: url('/fonts/Archer-Book.ffil'); } 
 
 /* ----------------------------------------------------------
  * HEADLINES
@@ -117,7 +118,8 @@ h1 span.colored, h2 span.colored, h3 span.colored, h4 span.colored, h5 span.colo
 
 p {
     color: #674321;
-    font: 13px/21px Arial;
+    font: 13px/21px;
+    font-family:Archer-Book;
     padding-bottom: 10px;
 }
 
