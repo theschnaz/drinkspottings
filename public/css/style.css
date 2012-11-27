@@ -122,7 +122,7 @@ p {
     padding-bottom: 10px;
 }
 
-a { color: #F7941E; text-decoration: none; }
+a { color: #603913; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 img {
@@ -169,7 +169,7 @@ a.image-holder .image-zoom {
 }
 
 .drinkinfo {
-	background-color: #F4E4BF; 
+	background-color: #EADFCA; 
 	padding:5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -624,8 +624,8 @@ ul#menu li:hover > .pixel-mega-menu { display: block; }
 	height: 530px;
 	overflow-y:auto; 
 	margin-right: 4px;
-	background-color:#ffffff;
-	border-color:#C1B18B;
+	background-color:#F2EDE9;
+	border-color:#603913;
 	border-width:1px;
 	border-style:solid;
 	padding:5px;

@@ -2,17 +2,15 @@
   <div class="header-bar">
     <div id="logo">
       <a href="/"><img src="/images/logo.png" style="height:40px;"/></a>
-    </div>
-    <ul id="menu">  
-      <% if current_user %>
-        <li>
-          <%= link_to "Sign Out", signout_path %>
-        </li>
-      <% else %>
-        <li>
-          <%= link_to "Sign In", "/auth/facebook" %>
-        </li>
-      <% end %>
-    </ul>
+    </div> 
+    <% if current_user %>
+      <p>
+        <%= link_to "Log Out", signout_path %>
+      </p>
+    <% else %>
+      <p>
+        <%= link_to "Log In", "/auth/facebook" %>
+      </p>
+    <% end %>
   </div>
 </div>
