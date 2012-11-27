@@ -117,13 +117,12 @@ span.colored { color: #ca9351; }
 h1 span.colored, h2 span.colored, h3 span.colored, h4 span.colored, h5 span.colored, h6 span.colored { color: #c0b294; }
 
 p {
-    color: #674321;
-    font: 13px/21px;
-    font-family:Archer-Book;
+    color: #603913;
+    font: 16px/21px Archer-Book;
     padding-bottom: 10px;
 }
 
-a { color: #603913; text-decoration: none; }
+a { color: #F7941E; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 img {
