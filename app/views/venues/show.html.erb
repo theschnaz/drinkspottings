@@ -2,9 +2,11 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP-7wNkBjb_WRCCKGTinJVK6Xg2kJKV7o&sensor=false">
 </script>
 <script type="text/javascript">
+	  var lat = '<%= @venue.lat %>';
+	  var lng = '<%= @venue.lng %>';
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(@venue.lat, @venue.lng),
+          center: new google.maps.LatLng(lat, lng),
           zoom: 8,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
