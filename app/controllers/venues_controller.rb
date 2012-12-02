@@ -2,6 +2,7 @@ class VenuesController < ApplicationController
 
 
   def show
+  	@venue_page = true;
     @venue = Venue.find(:first, :conditions => ["id = ?", params[:id]])
     #@drinks = Tag.find(:all, :conditions => ["name = ?", params[:id]])
     
