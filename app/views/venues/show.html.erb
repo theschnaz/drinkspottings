@@ -4,7 +4,7 @@
 <script type="text/javascript">
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
+          center: new google.maps.LatLng(@venue.lat, @venue.lng),
           zoom: 8,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -21,9 +21,9 @@
   </div>
 <% end %>
 
-<div class="sidebar-right">
-  <h6 style="margin-bottom:15px;"><%= @venue.name %></h6>
-  <div id="map_canvas" style="width:100%; height:100%"></div>
+<div class="sidebar-left">
+  <p style="font-size:22px; font-family: 'Kaushan Script';"><%= @venue.name %></p>
+  <div id="map_canvas" style="width:190px; height:190px; border: 5px; border-style: solid; border-color: #D05C27;"></div>
 </div>
 
 <div class="mainarea mainarea-center">
