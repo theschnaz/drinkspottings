@@ -7,11 +7,17 @@
       function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(lat, lng),
-          zoom: 8,
+          zoom: 12,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map_canvas"),
             mapOptions);
+            
+        var myLatlng = new google.maps.LatLng(lat, lng);
+        var marker = new google.maps.Marker({
+      	  position: myLatlng,
+      	  map: map
+ 	 	})
       }
     </script>
 <% if current_user.nil? %>
