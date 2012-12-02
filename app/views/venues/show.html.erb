@@ -1,3 +1,17 @@
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP-7wNkBjb_WRCCKGTinJVK6Xg2kJKV7o&sensor=FALSE">
+</script>
+<script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+      }
+    </script>
 <% if current_user.nil? %>
     <h1>Follow <%= @venue.name %> on Drinkspottings</h1>
     Don't miss any drinks posted at <%= @venue.name %>.  Get your account on Drinkspottings today.
@@ -9,6 +23,7 @@
 
 <div class="sidebar-right">
   <h6 style="margin-bottom:15px;"><%= @venue.name %></h6>
+  <div id="map_canvas" style="width:100%; height:100%"></div>
 </div>
 
 <div class="mainarea mainarea-center">
