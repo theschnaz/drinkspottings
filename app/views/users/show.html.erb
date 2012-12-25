@@ -1,10 +1,8 @@
 <% if current_user.nil? %>
-	<div style="height:130px; padding-top:10px;">
+	<div style="height:115px; padding-top:10px;">
       <h1 style="margin-bottom:15px;"><%= @user.name %> is on Drinkspottings</h1>
-      <p>
-        Don't miss any drinks from <%= @user.name %>.  Get your account on Drinkspottings today.
-        <br />
-        <strong><a href="/auth/facebook">Sign up today!</a></strong>
+      <p>Don't miss any drinks from <%= @user.name %>.  Get your account on Drinkspottings.</p>
+      <p style="font-size:24px;"><strong><a href="/auth/facebook">Sign up today!</a></strong></p>
       </p>
     </div>
 <% end %>
