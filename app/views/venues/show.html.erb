@@ -20,12 +20,13 @@
  	 	})
       }
     </script>
+
 <% if current_user.nil? %>
-    <h1>Follow <%= @venue.name %> on Drinkspottings</h1>
-    Don't miss any drinks posted at <%= @venue.name %>.  Get your account on Drinkspottings today.
-    <br />
-    <strong><a href="/auth/facebook">Sign up today!</a></strong>
-    <br /><br />
+  <div style="height:105px; padding-top:10px;">
+    <h1 style="margin-bottom:15px; float:left;"><%= @venue.name %> is on Drinkspottings!</h1> 
+    <a href="/auth/facebook"><img src="/images/facebook-login.jpeg" style="padding-left:15px; padding-top:3px; width:20%;"></a>
+    <div style="clear:both;"></div>
+    <p>Don't miss any drinks posted at <%= @venue.name %>.  Get your account on Drinkspottings today!</p>
   </div>
 <% end %>
 
