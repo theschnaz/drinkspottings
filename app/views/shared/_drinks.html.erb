@@ -24,11 +24,9 @@
             <% i += 1 %>
           <% end %>
         <% end %>
-        <br />
-        <a href="/users/<%= f.userid %>"><%= f.personname %></a> at <a href="/venues/<%= f.venue_id %>"><%= f.venue_name %></a>
-        <br />
+        <p><a href="/users/<%= f.userid %>"><%= f.personname %></a> at <a href="/venues/<%= f.venue_id %>"><%= f.venue_name %></a></p>
         <% if f.description %>
-          "<%= f.description %>"
+          <p>"<%= f.description %>"</p>
         <% end %>
       </div>
       <br />
