@@ -151,9 +151,6 @@ class PostsController < ApplicationController
       @tag.user_id = @post.posted_by
       @tag.save
     end
-    
-    render :text => "Drink posted =)"
-    
   
   end
   
