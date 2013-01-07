@@ -151,6 +151,8 @@ class PostsController < ApplicationController
       @tag.user_id = @post.posted_by
       @tag.save
     end
+    
+    @mobile = true
   
   end
   
