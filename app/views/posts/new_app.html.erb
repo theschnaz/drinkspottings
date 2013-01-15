@@ -1,4 +1,4 @@
-<h2><%= @error %></h2>
+<p><strong><%= @error %></strong></p>
 <%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true, :name => 'add_drink' } do |f| %>
   <p>
     <%= f.label :name %>
@@ -36,5 +36,5 @@
   </p>
     <%= hidden_field_tag(:posted_by, @post.posted_by) %>
     <%= hidden_field_tag(:drink_id, @post.id) %>
-  <p><div style="height:50px;"><%= f.submit "Post =>" %></div></p>
+  <p><%= f.submit "Post =>" %></p>
 <% end %>
