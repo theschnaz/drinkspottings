@@ -1,11 +1,11 @@
-Error = <%= @error %>
+<h2><%= @error %></h2>
 
 <%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true, :name => 'add_drink' } do |f| %>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
-  <p style="padding-left:2px;">
+  <p style="padding-left:5px;">
   	<%= f.label :rating %><br />
     <%= f.radio_button :rating, '1' %> <img src="/heart.png" width="15" /> <br />
     <%= f.radio_button :rating, '2' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
@@ -13,12 +13,21 @@ Error = <%= @error %>
     <%= f.radio_button :rating, '4' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
     <%= f.radio_button :rating, '5' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
   </p>
-  <p><%= f.submit "Submit" %></p>
   <p>
     <%= f.label :description %><br />
     <%= f.text_area :description, :rows => 10 %>
   </p>
-  <p>
+  <p style="padding-left:5px;">
+  	<%= f.label :locations %><br />
+    <% @venues.each do |v| %>
+      <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
+    <% end %>
+  </p>
+  <%= hidden_field_tag(:posted_by, @post.posted_by) %>
+  <%= hidden_field_tag(:drink_id, @post.id) %>
+  <p><%= f.submit "Post =)" %></p>
+  <p style="padding-left:5px;">
+  	<%= f.label :tags %>(*<i>Optional</i>)<br />
     <%= check_box_tag 'whiskey', 'selected' %> Whiskey <br />
     <%= check_box_tag 'scotch', 'selected' %> Scotch <br />  
     <%= check_box_tag 'gin', 'selected' %> Gin <br />
@@ -29,12 +38,5 @@ Error = <%= @error %>
     <%= check_box_tag 'sake', 'selected' %> Sake <br />
     <%= check_box_tag 'wine', 'selected' %> Wine <br />
   </p>
-  <p>
-    <% @venues.each do |v| %>
-      <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
-    <% end %>
-  </p>
-  <%= hidden_field_tag(:posted_by, @post.posted_by) %>
-  <%= hidden_field_tag(:drink_id, @post.id) %>
-  <p><%= f.submit "Submit" %></p>
+  <p><%= f.submit "Post =>" %></p>
 <% end %>
