@@ -1,4 +1,4 @@
-<p><strong><%= @error %></strong></p>
+<p><strong style="color:red;"><%= @error %></strong></p>
 <%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true, :name => 'add_drink' } do |f| %>
   <p>
     <%= f.label :name %>
