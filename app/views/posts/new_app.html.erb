@@ -1,8 +1,7 @@
 <h2><%= @error %></h2>
-
 <%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true, :name => 'add_drink' } do |f| %>
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </p>
   <p style="padding-left:5px;">
@@ -14,20 +13,17 @@
     <%= f.radio_button :rating, '5' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
   </p>
   <p>
-    <%= f.label :description %><br />
+    <%= f.label :description %>
     <%= f.text_area :description, :rows => 10 %>
   </p>
   <p style="padding-left:5px;">
-  	<%= f.label :locations %><br />
+  	<%= f.label :locations %>
     <% @venues.each do |v| %>
       <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
     <% end %>
   </p>
-  <%= hidden_field_tag(:posted_by, @post.posted_by) %>
-  <%= hidden_field_tag(:drink_id, @post.id) %>
-  <p><%= f.submit "Post =)" %></p>
   <p style="padding-left:5px;">
-  	<%= f.label :tags %>(*<i>Optional</i>)<br />
+  	<%= f.label :tags %>
     <%= check_box_tag 'whiskey', 'selected' %> Whiskey <br />
     <%= check_box_tag 'scotch', 'selected' %> Scotch <br />  
     <%= check_box_tag 'gin', 'selected' %> Gin <br />
@@ -38,5 +34,7 @@
     <%= check_box_tag 'sake', 'selected' %> Sake <br />
     <%= check_box_tag 'wine', 'selected' %> Wine <br />
   </p>
-  <p><%= f.submit "Post =>" %></p>
+    <%= hidden_field_tag(:posted_by, @post.posted_by) %>
+    <%= hidden_field_tag(:drink_id, @post.id) %>
+  <p><div style="height:50px;"><%= f.submit "Post =>" %></div></p>
 <% end %>
