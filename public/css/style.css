@@ -272,8 +272,9 @@ label {
     font-style: italic;
 }
 input, textarea {
+    height: 16px;
     padding: 8px 10px 8px 10px;
-    border: 1px solid #c3b598;
+    //border: 1px solid #c3b598;
     font: 12px/16px Arial;
     color: #888172;
     margin: 0 0 20px 0;
