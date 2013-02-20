@@ -27,7 +27,7 @@ class PostsController < ApplicationController
     venues = foursquare.venues.search(:ll => fourvenue, :query => "walter food")
     @venues = venues[11..-1]
     #@venues =foursquare.venues.nearby(:ll => fourvenue)
-    #render :text => @venues
+    render :text => @venues
     #@venues = @venues[(0..15)]
   end
   
