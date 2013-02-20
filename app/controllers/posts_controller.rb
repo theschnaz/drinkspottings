@@ -24,10 +24,9 @@ class PostsController < ApplicationController
     
     #get nearby places from 4sq
     foursquare = Foursquare::Base.new("G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT", "T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV")
-    venues = foursquare.venues.search(:ll => fourvenue, :query => "walter food")
-    @venues = venues[places]
+    @venues = foursquare.venues.search(:ll => fourvenue, :query => "walter food")
     #@venues =foursquare.venues.nearby(:ll => fourvenue)
-    render :text => @venues
+    render :text => @venues.places
     #@venues = @venues[(0..15)]
   end
   
