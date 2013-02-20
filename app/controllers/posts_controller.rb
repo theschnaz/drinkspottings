@@ -26,9 +26,10 @@ class PostsController < ApplicationController
     foursquare = Foursquare::Base.new("G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT", "T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV")
     #@venues = foursquare.venues.search(:ll => fourvenue, :query => "walter food")
     @venues = foursquare.venues.search(:ll => fourvenue)
-    @venues = @venues["places"]
+    
+    #@venues = @venues["places"]
     #@venues =foursquare.venues.nearby(:ll => fourvenue)
-    #render :text => @venues["places"]
+    render :text => @venues
     #@venues = @venues[(0..15)]
   end
   
