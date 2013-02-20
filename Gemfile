@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'foursquare2'
+
 gem 'rails', '3.1.10'
 gem 'omniauth-facebook'
 gem 'fb_graph', '>=1.6.5'
