@@ -18,7 +18,7 @@
   </p>
   <p style="padding-left:5px;">
   	<%= f.label :locations %>
-    <% @venues.places each do |v| %>
+    <% @venues each do |v| %>
       <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
     <% end %>
   </p>
