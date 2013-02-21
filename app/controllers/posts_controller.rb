@@ -37,7 +37,8 @@ class PostsController < ApplicationController
   	@drink_id = params[:drink_id]
     @lat = params[:lat]
     @long = params[:long]
-    @text = @drink_id + ' ' + @lat + ' ' + @long
+    @venue_name = params[:venue_name]
+    @text = @drink_id + ' ' + @lat + ' ' + @long + ' ' + @venue_name
     render :text => @text
   
   end
