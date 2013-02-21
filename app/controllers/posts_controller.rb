@@ -61,8 +61,8 @@ class PostsController < ApplicationController
     @venues = @venues["places"]
     #@venues = @venues["places"]
     #@venues =foursquare.venues.nearby(:ll => fourvenue)
-    #render :text => @venues
-    @venues = @venues[(0..9)]
+    render :text => @venues
+    #@venues = @venues[(0..9)]
   end
   
   def create_app
