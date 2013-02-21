@@ -7,10 +7,7 @@
       <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
     <% end %>
   </p>
-  <form id="zip_search" method="get" action="/new_app">
-    <input name="tZip" type="text" id="zipfield" value="ZIP CODE" onblur="if(this.value=='') this.value='ZIP CODE';" onfocus="if(this.value=='ZIP CODE') this.value='';" />
-    <input type="image" value="Submit" class="submitbutton" src="/images/submit_button.gif" />
-  </form>
+
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
