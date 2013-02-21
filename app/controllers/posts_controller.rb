@@ -44,6 +44,10 @@ class PostsController < ApplicationController
   
   	@mobile = true
   	@post = Post.find_by_id(params[:drink_id])
+  	
+  	@drink_id = params[:drink_id]
+    @lat = params[:lat]
+    @long = params[:long]
   	@venue_name = params[:venue_name]
     
     fourvenue = params[:lat] + "," + params[:long]
