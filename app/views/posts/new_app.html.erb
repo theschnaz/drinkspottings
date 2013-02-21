@@ -1,12 +1,12 @@
 <p><strong style="color:red;"><%= @error %></strong></p>
 
-<p style="padding-left:5px;">
-  <%= f.label :locations %>
-  <% @venues.each do |v| %>
-    <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
-  <% end %>
-</p>
 <%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true, :name => 'add_drink' } do |f| %>
+  <p style="padding-left:5px;">
+    <%= f.label :locations %>
+    <% @venues.each do |v| %>
+      <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
+    <% end %>
+  </p>
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
