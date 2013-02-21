@@ -7,9 +7,12 @@
       <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
     <% end %>
   </p>
-  <%= form_tag("www.google.com") do %>
+  <%= form_tag("/new_app", :method => "get") do %>
     <%= label_tag(:q, "Search for a location:") %>
     <%= text_field_tag(:q) %>
+    <%= hidden_field_tag(:lat, '43') %>
+    <%= hidden_field_tag(:long, '-73') %>
+    <%= hidden_field_tag(:drink_id, '307') %>
     <%= submit_tag("Search") %>
   <% end %>
   <p>
