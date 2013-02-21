@@ -7,7 +7,7 @@
       <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
     <% end %>
   </p>
-  
+  <p><a href="/venue_search?lat=<%= @lat %>&long=<%= @long %>&drink_id=<%= @drink_id %>">Search for venue</a></p>
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
