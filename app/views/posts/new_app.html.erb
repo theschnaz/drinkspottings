@@ -7,7 +7,7 @@
       <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
     <% end %>
   </p>
-  <%= form_tag("/new_app", :method => "get") do %>
+  <%= form_tag("/new_app", :method => "post") do %>
     <%= label_tag(:q, "Search for a location:") %>
     <%= text_field_tag(:q) %>
     <%= hidden_field_tag(:lat, '43') %>
