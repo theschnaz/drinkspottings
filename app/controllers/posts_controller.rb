@@ -34,7 +34,9 @@ class PostsController < ApplicationController
   end
   
   def venue_search
-  
+    @drink_id = params[:drink_id]
+    @lat = params[:lat]
+    @long = params[:long]
   end
   
   def create_app
