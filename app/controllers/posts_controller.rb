@@ -44,9 +44,25 @@ class PostsController < ApplicationController
   end
   
   def venue_search
-    @drink_id = params[:drink_id]
-    @lat = params[:lat]
-    @long = params[:long]
+    if request.referer
+  	  @error = "Please name, rate, and post your drink at a venue."
+  	end
+  
+  	@mobile = true
+  	@post = Post.find_by_id(params[:drink_id])
+  	@venue_name = params[:venue_name]
+    
+    fourvenue = params[:lat] + "," + params[:long]
+    
+    #get nearby places from 4sq
+    foursquare = Foursquare::Base.new("G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT", "T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV")
+    #@venues = foursquare.venues.search(:ll => fourvenue, :query => "walter food")
+    @venues = foursquare.venues.search(:ll => fourvenue, :query => @venue_name)
+    @venues = @venues["places"]
+    #@venues = @venues["places"]
+    #@venues =foursquare.venues.nearby(:ll => fourvenue)
+    #render :text => @venues
+    @venues = @venues[(0..9)]
   end
   
   def create_app

@@ -1,8 +1,42 @@
-<%= form_tag('/new_app_venue', :method => :get) do %>
-  <%= label_tag(:venue_name, "Search for:") %>
-  <%= text_field_tag(:venue_name) %>
-  <%= hidden_field_tag(:drink_id, @drink_id) %>
-  <%= hidden_field_tag(:lat, @lat) %>
-  <%= hidden_field_tag(:long, @long) %>
-  <div><%= submit_tag 'Save' %></div>
-<% end -%>
+<p><strong style="color:red;"><%= @error %></strong></p>
+
+<%= form_for @post, :url => { :action => "create_app" }, :html => { :multipart => true, :name => 'add_drink' } do |f| %>
+  <p style="padding-left:5px;">
+    <%= f.label :locations %>
+    <% @venues.each do |v| %>
+      <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
+    <% end %>
+  </p>
+  <a href="/venue_search?lat=40.715729&long=-73.941829&drink_id=307&venue=walter foods">Search for venue</a>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p style="padding-left:5px;">
+  	<%= f.label :rating %><br />
+    <%= f.radio_button :rating, '1' %> <img src="/heart.png" width="15" /> <br />
+    <%= f.radio_button :rating, '2' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
+    <%= f.radio_button :rating, '3' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
+    <%= f.radio_button :rating, '4' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
+    <%= f.radio_button :rating, '5' %> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <img src="/heart.png" width="15" /> <br />
+  </p>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_area :description, :rows => 10 %>
+  </p>
+  <p style="padding-left:5px;">
+  	<%= f.label :tags %>
+    <%= check_box_tag 'whiskey', 'selected' %> Whiskey <br />
+    <%= check_box_tag 'scotch', 'selected' %> Scotch <br />  
+    <%= check_box_tag 'gin', 'selected' %> Gin <br />
+    <%= check_box_tag 'vodka', 'selected' %> Vodka <br />
+    <%= check_box_tag 'rum', 'selected' %> Rum <br />
+    <%= check_box_tag 'tequila', 'selected' %> Tequila <br />
+    <%= check_box_tag 'beer', 'selected' %> Beer <br />
+    <%= check_box_tag 'sake', 'selected' %> Sake <br />
+    <%= check_box_tag 'wine', 'selected' %> Wine <br />
+  </p>
+    <%= hidden_field_tag(:posted_by, @post.posted_by) %>
+    <%= hidden_field_tag(:drink_id, @post.id) %>
+    <input name="commit" type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSn4Sdyc0LfVV58hVW-k3LPUidJCPr4ECQ7yRq7tYJL-7GiPxz_wg" style="height:45px;" />
+<% end %>
