@@ -33,13 +33,6 @@ class PostsController < ApplicationController
     @venues = @venues[(0..9)]
   end
   
-  def venue_search
-    @drink_id = params[:drink_id])
-    
-    @lat = params[:lat]
-    @long = params[:long]
-  end
-  
   
   def create_app
   	if params[:post][:name] == ""
