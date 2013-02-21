@@ -7,14 +7,10 @@
       <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
     <% end %>
   </p>
-  <%= form_tag("/new_app", :method => "post") do %>
-    <%= label_tag(:q, "Search for a location:") %>
-    <%= text_field_tag(:q) %>
-    <%= hidden_field_tag(:lat, '43') %>
-    <%= hidden_field_tag(:long, '-73') %>
-    <%= hidden_field_tag(:drink_id, '307') %>
-    <%= submit_tag("Search") %>
-  <% end %>
+  <form id="zip_search" method="get" action="/new_app">
+    <input name="tZip" type="text" id="zipfield" value="ZIP CODE" onblur="if(this.value=='') this.value='ZIP CODE';" onfocus="if(this.value=='ZIP CODE') this.value='';" />
+    <input type="image" value="Submit" class="submitbutton" src="/images/submit_button.gif" />
+  </form>
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
