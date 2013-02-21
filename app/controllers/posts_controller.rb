@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     #@venues = @venues["places"]
     #@venues =foursquare.venues.nearby(:ll => fourvenue)
     #render :text => @venues
-    #@venues = @venues[(0..15)]
+    @venues = @venues[(0..5)]
   end
   
   
