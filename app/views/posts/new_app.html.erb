@@ -7,6 +7,11 @@
       <%= radio_button_tag 'venue', v.id %> <%= v.name %> <br />
     <% end %>
   </p>
+  <%= form_tag("www.google.com") do %>
+    <%= label_tag(:q, "Search for a location:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
