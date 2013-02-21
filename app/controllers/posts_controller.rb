@@ -33,6 +33,15 @@ class PostsController < ApplicationController
     @venues = @venues[(0..9)]
   end
   
+  def new_app_venue
+  	@drink_id = params[:drink_id]
+    @lat = params[:lat]
+    @long = params[:long]
+    @text = @drink_id + ' ' + @lat + ' ' + @long
+    render :text => @text
+  
+  end
+  
   def venue_search
     @drink_id = params[:drink_id]
     @lat = params[:lat]
