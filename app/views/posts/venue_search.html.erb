@@ -1,6 +1,6 @@
 <%= form_tag('/new_app_venue', :method => :get) do %>
-  <%= f.label :venue_name %>
-  <%= f.text_field :venue_name %>
+  <%= label_tag(:venue_name, "Search for:") %>
+  <%= text_field_tag(:venue_name) %>
   <%= hidden_field_tag(:drink_id, @drink_id) %>
   <%= hidden_field_tag(:lat, @lat) %>
   <%= hidden_field_tag(:long, @long) %>
