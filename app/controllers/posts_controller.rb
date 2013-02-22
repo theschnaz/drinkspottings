@@ -63,6 +63,7 @@ class PostsController < ApplicationController
   end
   
   def venue_search
+    @mobile = true
     @drink_id = params[:drink_id]
     @lat = params[:lat]
     @long = params[:long]
