@@ -37,6 +37,10 @@ class PostsController < ApplicationController
     @venues = @venues[(0..9)]
   end
   
+  def delete_app
+    redirect_to "/"
+  end
+  
   def new_app_venue
   	if request.referer
   	  @error = "Please name, rate, and post your drink at a venue."
