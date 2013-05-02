@@ -38,7 +38,12 @@ class PostsController < ApplicationController
   end
   
   def delete_app
-    redirect_to "/"
+    user = User.find_by_uid(params[:uid])
+    
+    if user
+      drink = Post.find_by_id(params[:drink_id])
+      drink.delete
+    end
   end
   
   def new_app_venue
