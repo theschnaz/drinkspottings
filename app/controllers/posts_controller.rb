@@ -44,6 +44,8 @@ class PostsController < ApplicationController
       drink = Post.find_by_id(params[:drink_id])
       drink.delete
     end
+    
+    render :text => "unposted"
   end
   
   def new_app_venue
