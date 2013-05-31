@@ -4,7 +4,7 @@ gem 'foursquare2'
 
 gem 'rails', '3.1.10'
 gem 'omniauth-facebook'
-gem 'fb_graph', '>=1.6.5'
+gem 'fb_graph', '2.5.9'
 
 gem 'multi_json'
 
