@@ -16,6 +16,7 @@ class SessionsController < ApplicationController
      user_data = FbGraph::User.fetch(uid)
      user = User.new
      user.name = user_data.name
+     user.facebook_key = params[:key]
      user.newsletter = params[:newsletter]
      user.username = user_data.username
      user.email = user_data.email
