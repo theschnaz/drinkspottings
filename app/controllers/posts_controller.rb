@@ -209,7 +209,7 @@ class PostsController < ApplicationController
    
    	  me = FbGraph::User.me(user.facebook_key)
    	  link = me.link!(
-   	    :link => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/000/' + @post.id.to_s + '/medium/' + @post.photo_file_name,
+   	    :link => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/000/561/medium/tixhr1463013087.txt?1374720499',
    	    :message => @post.description
 	  )
 	#end
