@@ -205,13 +205,13 @@ class PostsController < ApplicationController
     @mobile = true
     
     #if (params[:fb] == 1)
-      user = User.find(:first, :conditions => ["id = ?", params[:posted_by]])
+    #  user = User.find(:first, :conditions => ["id = ?", params[:posted_by]])
    
-   	  me = FbGraph::User.me(user.facebook_key)
-   	  link = me.link!(
-   	    :link => 'http://www.drinkspottings.com/image.html',
-   	    :message => 'ds image'
-	  )
+   #	  me = FbGraph::User.me(user.facebook_key)
+   #	  link = me.link!(
+   #	    :link => 'http://www.drinkspottings.com/image.html',
+   #	    :message => 'ds image'
+#	  )
 	#end
   end
   
