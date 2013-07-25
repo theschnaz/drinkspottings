@@ -39,5 +39,8 @@
   </p>
     <%= hidden_field_tag(:posted_by, @post.posted_by) %>
     <%= hidden_field_tag(:drink_id, @post.id) %>
+    <br />
+    <input type="checkbox" id="fb" name="fb" value="1" /> Post to Facebook?
+    <br />
     <input name="commit" type="image" src="/images/post.jpeg" style="height:45px;" />
 <% end %>
