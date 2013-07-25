@@ -133,7 +133,7 @@ class PostsController < ApplicationController
         #if the venue was pulled from 4sq, then use that ID and post the drink there
         @post.venue_id = new_venue.id
         
-        if (params[:fb] == 1)
+        #if (params[:fb] == 1)
           user = User.find(:first, :conditions => ["id = ?", @post.posted_by])
     
     	  me = FbGraph::User.me(user.facebook_key)
@@ -141,7 +141,7 @@ class PostsController < ApplicationController
     	    :link => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/000/' + @post.id.to_s + '/medium/' + @post.photo_file_name,
     	    :message => @post.description
 		  )
-		end
+		#end
       end
     end
     
