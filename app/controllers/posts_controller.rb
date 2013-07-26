@@ -204,7 +204,7 @@ class PostsController < ApplicationController
     
     @mobile = true
     
-    if (params[:fb] == 1)
+    #if (params[:fb] == 1)
       user = User.find(:first, :conditions => ["id = ?", params[:posted_by]])
 	  
 	  me.feed!(
@@ -213,7 +213,7 @@ class PostsController < ApplicationController
   :name => 'FbGraph Sample',
   :description => 'test test'
 )
-	end
+	#end
   end
   
 
