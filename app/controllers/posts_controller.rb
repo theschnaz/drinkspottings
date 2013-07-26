@@ -204,7 +204,7 @@ class PostsController < ApplicationController
     
     @mobile = true
     
-    if (params[:fb] == 1)
+    if (params[:fb] == 'post')
       user = User.find(:first, :conditions => ["id = ?", params[:posted_by]])
    
    	  me = FbGraph::User.me(user.facebook_key)
