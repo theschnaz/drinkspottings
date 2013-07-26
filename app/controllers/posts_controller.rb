@@ -206,13 +206,12 @@ class PostsController < ApplicationController
     
     #if (params[:fb] == 1)
       user = User.find(:first, :conditions => ["id = ?", params[:posted_by]])
-	  
-	  me.feed!(
-  :message => 'I posted an update',
-  :link => 'http://www.drinkspottings.com/image.html',
-  :name => 'FbGraph Sample',
-  :description => 'test test'
-)
+   
+   	  me = FbGraph::User.me(user.facebook_key)
+   	  link = me.link!(
+   	    :link => 'http://www.drinkspottings.com/image.html?q=1',
+   	    :message => 'ds image asdf'
+	  )
 	#end
   end
   
