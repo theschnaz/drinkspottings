@@ -209,12 +209,12 @@ class PostsController < ApplicationController
    
    	  me = FbGraph::User.me(user.facebook_key)
    	  me.feed!(
-  :message => 'Updating via FbGraph',
-  :picture => 'https://graph.facebook.com/matake/picture',
-  :link => 'https://github.com/nov/fb_graph',
-  :name => 'FbGraph',
-  :description => 'A Ruby wrapper for Facebook Graph API'
-)
+	    :message => user.name + ' posted a drink.',
+	    :picture => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/000/561/medium/tixhr1463013087.txt?1374720499',
+	    :link => 'http://drinkspottings.com/drinks.html',
+	    :name => 'Drinkspottings',
+	    :description => @post.description
+	  )
 	end
   end
   
