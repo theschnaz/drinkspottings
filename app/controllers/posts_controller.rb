@@ -211,7 +211,7 @@ class PostsController < ApplicationController
    	  me.feed!(
 	    :message => user.name + ' posted a drink.',
 	    :picture => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/000/561/medium/tixhr1463013087.txt?1374720499',
-	    :link => 'http://drinkspottings.com/drinks.html',
+	    :link => 'http://drinkspottings.com/images.html',
 	    :name => 'Drinkspottings',
 	    :description => @post.description
 	  )
