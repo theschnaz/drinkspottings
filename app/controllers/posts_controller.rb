@@ -209,7 +209,7 @@ class PostsController < ApplicationController
    
    	  me = FbGraph::User.me(user.facebook_key)
    	  link = me.link!(
-   	    :link => 'http://www.buzzfeed.com/erinlarosa/sticky-questions-willy-wonka-left-unanswered',
+   	    :link => 'http://www.drinkspottings.com/buzz.html',
    	    :message => @post.description
 	  )
 	end
