@@ -217,7 +217,7 @@ class PostsController < ApplicationController
 	    :message => user.name + ' posted a drink.',
 	    :picture => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/000/' + @post.id.to_s + '/medium/' + @post.photo_file_name + '?' + @post.photo_file_size.to_s,
 	    :link => 'http://drinkspottings.com/',
-	    :name => @post.name + '(' + @post.rating.to_s + ' &hearts;)',
+	    :name => @post.name + '(' + @post.rating.to_s + ' ' + hearts + ')',
 	    :description => @post.description
 	  )
 	end
