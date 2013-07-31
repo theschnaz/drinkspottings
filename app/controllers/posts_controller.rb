@@ -213,7 +213,11 @@ class PostsController < ApplicationController
 	    :picture => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/000/' + @post.id.to_s + '/medium/' + @post.photo_file_name + '?' + @post.photo_file_size.to_s,
 	    :link => 'http://drinkspottings.com/',
 	    :name => @post.name,
-	    :description => @post.description + '(' + @post.rating + ' hearts)'
+	    if (@post.rating == 1)
+	      :description => @post.description + '(' + @post.rating.to_s + ' heart)'
+	    else
+	      :description => @post.description + '(' + @post.rating.to_s + ' hearts)'
+	    end
 	  )
 	end
   end
