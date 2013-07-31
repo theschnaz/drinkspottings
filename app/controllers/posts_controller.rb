@@ -206,6 +206,11 @@ class PostsController < ApplicationController
     
     if (params[:fb] == 'post')
       user = User.find(:first, :conditions => ["id = ?", params[:posted_by]])
+      
+      hearts = 'hearts'
+      if (@post.rating == 1)
+        hearts = 'heart'
+      end
    
    	  me = FbGraph::User.me(user.facebook_key)
    	  me.feed!(
