@@ -206,6 +206,11 @@ class PostsController < ApplicationController
     
     if (params[:fb] == 'post')
       user = User.find(:first, :conditions => ["id = ?", params[:posted_by]])
+      
+      hearts = 'hearts'
+      if (@post.rating == 1)
+        hearts = 'heart'
+      end
    
    	  me = FbGraph::User.me(user.facebook_key)
    	  me.feed!(
@@ -213,11 +218,7 @@ class PostsController < ApplicationController
 	    :picture => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/000/' + @post.id.to_s + '/medium/' + @post.photo_file_name + '?' + @post.photo_file_size.to_s,
 	    :link => 'http://drinkspottings.com/',
 	    :name => @post.name,
-	    if (@post.rating == 1)
-	      :description => @post.description + '(' + @post.rating.to_s + ' heart)'
-	    else
-	      :description => @post.description + '(' + @post.rating.to_s + ' hearts)'
-	    end
+	    :description => @post.description + '(' + @post.rating.to_s + ' ' + hearts + ')'
 	  )
 	end
   end
