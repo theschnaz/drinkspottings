@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
     #if the user already exits, they are sent here becuase of a FB token issue, update token here
     if User.find_by_uid(uid)
       user.facebook_key = params[:key]
-      use.save
+      user.save
     end
     
     render :text => user.name
