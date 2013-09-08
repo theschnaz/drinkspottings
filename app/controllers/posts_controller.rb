@@ -212,14 +212,18 @@ class PostsController < ApplicationController
         hearts = 'heart'
       end
    
-   	  me = FbGraph::User.me(user.facebook_key)
-   	  me.feed!(
-	    :message => user.name + ' posted a drink.',
-	    :picture => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/000/' + @post.id.to_s + '/medium/' + @post.photo_file_name + '?' + @post.photo_file_size.to_s,
-	    :link => 'http://drinkspottings.com/',
-	    :name => @post.name + ' (' + @post.rating.to_s + ' ' + hearts + ')',
-	    :description => @post.description
-	  )
+   	  begin
+   	    me = FbGraph::User.me(user.facebook_key)
+   	    me.feed!(
+	      :message => user.name + ' posted a drink.',
+	      :picture => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/000/' + @post.id.to_s + '/medium/' + @post.photo_file_name + '?' + @post.photo_file_size.to_s,
+	      :link => 'http://drinkspottings.com/',
+	      :name => @post.name + ' (' + @post.rating.to_s + ' ' + hearts + ')',
+	      :description => @post.description
+	    )
+	  rescue
+	    render :text => "Something is wrong with your Facebook connection to Drinkspottings. Please uninstall and reinstall Drinkspottings."
+	  end
 	end
   end
   
