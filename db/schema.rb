@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130530015114) do
+ActiveRecord::Schema.define(:version => 20131209020508) do
 
   create_table "posts", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20130530015114) do
     t.string   "image"
     t.integer  "venue_id"
     t.integer  "rating"
+    t.string   "flag"
   end
 
   create_table "saves", :force => true do |t|
