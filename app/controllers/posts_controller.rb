@@ -48,6 +48,15 @@ class PostsController < ApplicationController
     render :text => "unposted"
   end
   
+  def flag_app
+    drink = Post.find_by_id(params[:drink_id])
+    
+    drink.flag = 1
+    drink.save
+    
+    render :text => "flagged"
+  end
+  
   def new_app_venue
   	if request.referer
   	  @error = "Please name, rate, and post your drink at a venue."
