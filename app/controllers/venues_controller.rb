@@ -11,7 +11,7 @@ class VenuesController < ApplicationController
     if current_user
       @saved_drinks = Save.find_by_sql ['SELECT "saves".drink_id as ID FROM "saves" WHERE "saves".user_id = \'' + current_user.id.to_s + '\'']
     elsif
-      @login_promo = true
+      @login_promo == true
     end
     ##render :json => @drink_ids
     
