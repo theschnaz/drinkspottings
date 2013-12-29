@@ -2,6 +2,10 @@ class PostsController < ApplicationController
 
   def show
     @drink = Post.find(params[:id])
+    
+    @drink_page = true #this will include OG stuff in application.html.erb
+    @drink_url = 'http://drinkspottings.com/posts/' + @drink.id.to_s
+    
     @user = User.find(@drink.posted_by)
     #@posted_and_liked_drinks = Post.find_by_sql ['SELECT "posts".* FROM "posts" WHERE ("posts".posted_by = ? ) ORDER BY posts.created_at DESC', @user.id]
     #posted and liked drinks
