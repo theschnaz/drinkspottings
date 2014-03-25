@@ -13,6 +13,7 @@ gem "json"
 gem "typhoeus"
 gem "quimby"
 
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 gem 'paperclip', "~> 3.0"
