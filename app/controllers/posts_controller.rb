@@ -49,13 +49,13 @@ class PostsController < ApplicationController
     #@venues = foursquare.venues.search(:ll => fourvenue, :query => "walter food")
     @venues = foursquare.search_venues(:ll => fourvenue)
     
-    render :json => @venues
+    #render :json => @venues
     
     ##@venues = @venues["nearby"]
     #@venues = @venues["places"]
     #@venues =foursquare.venues.nearby(:ll => fourvenue)
     #render :text => @venues
-    ##@venues = @venues[(0..9)]
+    @venues = @venues[(0..9)]
   end
   
   def delete_app
