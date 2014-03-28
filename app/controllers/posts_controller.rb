@@ -48,6 +48,9 @@ class PostsController < ApplicationController
     foursquare = Foursquare2::Client.new(:client_id => 'G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT', :client_secret => 'T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV', :api_version => '20120505')
     #@venues = foursquare.venues.search(:ll => fourvenue, :query => "walter food")
     @venues = foursquare.search_venues(:ll => fourvenue)
+    
+    render json: @venues
+    
     @venues = @venues["nearby"]
     #@venues = @venues["places"]
     #@venues =foursquare.venues.nearby(:ll => fourvenue)
