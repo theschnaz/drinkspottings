@@ -49,7 +49,7 @@ class PostsController < ApplicationController
     #@venues = foursquare.venues.search(:ll => fourvenue, :query => "walter food")
     @venues = foursquare.search_venues(:ll => fourvenue)
     
-    render :text => @venues
+    render :json => @venues
     
     ##@venues = @venues["nearby"]
     #@venues = @venues["places"]
