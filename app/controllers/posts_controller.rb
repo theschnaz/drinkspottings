@@ -51,7 +51,7 @@ class PostsController < ApplicationController
     
     #render :json => @venues
     
-    ##@venues = @venues["nearby"]
+    @venues = @venues["venues"]
     #@venues = @venues["places"]
     #@venues =foursquare.venues.nearby(:ll => fourvenue)
     #render :text => @venues
