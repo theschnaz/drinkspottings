@@ -94,11 +94,10 @@ class PostsController < ApplicationController
     fourvenue = params[:lat] + "," + params[:long]
     
     #get nearby places from 4sq
-    foursquare = Foursquare::Base.new("G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT", "T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV")
-    @venues = foursquare.venues.search(:ll => fourvenue, :query => @venue_name)
-    @venues = @venues["places"]
-    #@venues =foursquare.venues.nearby(:ll => fourvenue)
-    #render :text => @venues
+    foursquare = Foursquare2::Client.new(:client_id => 'G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT', :client_secret => 'T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV', :api_version => '20120505')
+    @venues = foursquare.search_venues(:ll => fourvenue)
+    @venues = @venues["venues"]
+
     @venues = @venues[(0..9)]
   
   end
