@@ -142,7 +142,7 @@ class PostsController < ApplicationController
       	#if not, add it via 4sq
         new_venue = Venue.new
         foursquare = Foursquare2::Client.new(:client_id => 'G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT', :client_secret => 'T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV', :api_version => '20120505')
-        venue = foursquare.search_venues(params[:venue])
+        venue = foursquare.venue(params[:venue])
       
         new_venue.foursquare_id = venue.id
         new_venue.name = venue.name
