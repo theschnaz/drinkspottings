@@ -239,12 +239,15 @@ class PostsController < ApplicationController
       if (@post.rating == 1)
         hearts = 'heart'
       end
+      
+      ##this hack sucks, it only works for 1000 images (picture line below)
+      @post.id.to_s
    
    	  begin
    	    me = FbGraph::User.me(user.facebook_key)
    	    me.feed!(
-	      :message => user.name + ' posted a drink.',
-	      :picture => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/000/' + @post.id.to_s + '/medium/' + @post.photo_file_name + '?' + @post.photo_file_size.to_s,
+	      :message => 'I just posted a drink.',
+	      :picture => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/001/' + @post.id.slice!(0) + '/medium/' + @post.photo_file_name + '?' + @post.photo_file_size.to_s,
 	      :link => 'http://drinkspottings.com/',
 	      :name => @post.name + ' (' + @post.rating.to_s + ' ' + hearts + ')',
 	      :description => @post.description
