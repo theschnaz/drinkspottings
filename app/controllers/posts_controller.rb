@@ -242,16 +242,12 @@ class PostsController < ApplicationController
       
       ##this hack sucks, it only works for 1000 images (picture line below)
       hackid = @post.id.to_s
-      
-      hackurl = 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/001/' + hackid[0,3] + '/medium/' + @post.photo_file_name + '?' + @post.photo_file_size.to_s
-      
-      render :text => hackurl
    
    	  begin
    	    me = FbGraph::User.me(user.facebook_key)
    	    me.feed!(
 	      :message => 'I just posted a drink.',
-	      :picture => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/001/' + hackid[0,3] + '/medium/' + @post.photo_file_name + '?' + @post.photo_file_size.to_s,
+	      :picture => 'http://s3.amazonaws.com/drinkspottingsimages/posts/photos/000/001/' + hackid[1,3] + '/medium/' + @post.photo_file_name + '?' + @post.photo_file_size.to_s,
 	      :link => 'http://drinkspottings.com/',
 	      :name => @post.name + ' (' + @post.rating.to_s + ' ' + hearts + ')',
 	      :description => @post.description
