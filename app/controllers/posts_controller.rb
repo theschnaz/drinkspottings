@@ -45,7 +45,7 @@ class PostsController < ApplicationController
     fourvenue = params[:lat] + "," + params[:long]
     
     #get nearby places from 4sq
-    foursquare = Foursquare2::Client.new(:client_id => 'G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT', :client_secret => 'T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV', :api_version => '20120505')
+    foursquare = Foursquare2::Client.new(:client_id => 'G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT', :client_secret => 'T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV', :api_version => '20131113')
     #@venues = foursquare.venues.search(:ll => fourvenue, :query => "walter food")
     @venues = foursquare.search_venues(:ll => fourvenue)
     
@@ -94,7 +94,7 @@ class PostsController < ApplicationController
     fourvenue = params[:lat] + "," + params[:long]
     
     #get nearby places from 4sq
-    foursquare = Foursquare2::Client.new(:client_id => 'G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT', :client_secret => 'T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV', :api_version => '20120505')
+    foursquare = Foursquare2::Client.new(:client_id => 'G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT', :client_secret => 'T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV', :api_version => '20131113')
     @venues = foursquare.search_venues(:ll => fourvenue, :query => @venue_name)
     @venues = @venues["venues"]
     @venues = @venues[(0..9)]
@@ -139,7 +139,7 @@ class PostsController < ApplicationController
       else
       	#if not, add it via 4sq
         new_venue = Venue.new
-        foursquare = Foursquare2::Client.new(:client_id => 'G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT', :client_secret => 'T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV', :api_version => '20120505')
+        foursquare = Foursquare2::Client.new(:client_id => 'G24WDWF3I0VR0HEJEXYOQ4MTQ5ZW21NVEAQKKVVQDGDAFHBT', :client_secret => 'T0SBP3DWC14VZ1ZI1ADJABS2SPQBQ4G204P1FEDVSUKQNFOV', :api_version => '20131113')
         venue = foursquare.venue(params[:venue])
       
         new_venue.foursquare_id = venue.id
