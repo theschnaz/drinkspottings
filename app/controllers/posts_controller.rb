@@ -166,6 +166,8 @@ class PostsController < ApplicationController
     @post.posted_by = params[:posted_by]
     @post.save
     
+    @venue = Venue.find_by_id(@post.venue_id)
+    
     if (params[:whiskey] == 'selected')
       @tag = Tag.new
       @tag.drink_id = @post.id
