@@ -171,6 +171,7 @@ class PostsController < ApplicationController
     
     @venue = Venue.find_by_id(@post.venue_id)
     @tip = foursquare.venue_tips(@venue.foursquare_id)
+    @tip = @tip[0]
     
     
     
