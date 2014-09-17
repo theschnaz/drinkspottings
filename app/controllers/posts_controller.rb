@@ -173,6 +173,8 @@ class PostsController < ApplicationController
     @tip = foursquare.venue_tips(@venue.foursquare_id)
     @tip = @tip[0]
     
+    render json: @tip
+    
     
     
     if (params[:whiskey] == 'selected')
